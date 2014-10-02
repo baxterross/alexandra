@@ -8,7 +8,7 @@ function switchPage(event) {
 		var image = $('#left .img[page='+page+']');
 		image.siblings('.img').fadeTo(300, 0, function() {
 			image.fadeTo(300, 1);
-			var bgColor = (page == 'modeling') ? 'rgba(212, 209, 194, 1)' : 'rgba(212, 209, 194, 0)';
+			var bgColor = (page == 'performance') ? 'rgba(212, 209, 194, 1)' : 'rgba(212, 209, 194, 0)';
 			$('body').animate({
 				'backgroundColor' : bgColor
 			}, 300);
