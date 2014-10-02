@@ -5,6 +5,7 @@ function switchPage(event) {
 	var page = wrapper.attr('page');
 	if (page != window.currentPage) {
 		window.currentPage = page;
+		history.pushState({}, page, page)
 		var image = $('#left .img[page='+page+']');
 		image.siblings('.img').fadeTo(300, 0, function() {
 			image.fadeTo(300, 1);
