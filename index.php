@@ -143,14 +143,10 @@ $videos = array(
 								</li>
 							</ul>
 							<div class="accordion" accordion="piano">
-								Alex has been studying piano since age 9 with Pacific Palisades-based private teacher
-								Hedy Ciani, sister of the late world-renowned Italian pianist Dino Ciani. Having received a
-								thorough education in both piano performance and music theory, Alex is an ardent pianist who
-								loves keyboards of all sorts, as can be witnessed by her work with the pianoforte, baroque
-								organ, and harpsichord. She has done some transcription work as well, expressively realizing
-								Leo Brouwer's guitar etudes on the piano. Alex has also gigged as a rehearsal and performance
-								choral accompanist around the Los Angeles area, playing for such groups as the UCLA Chorus,
-								American Lutheran Church in Burbank, and Cantate Hominem Men's Choir.
+								Having received a thorough education in both piano performance and music theory, Alex is an ardent pianist who loves keyboards of all sorts,
+								as can be witnessed by her work with the pianoforte, baroque organ, and harpsichord. She has done some transcription work as well,
+								expressively realizing Leo Brouwer's guitar etudes on the piano. Alex has also gigged as a rehearsal and performance choral accompanist
+								around the Los Angeles area, playing for such groups as the UCLA Chorus, American Lutheran Church in Burbank, and Cantate Hominem Men's Choir.
 							  <?php if ($videos['piano']) : ?>
 								<div class="centerHolder small">
 									<div class="arrow left">
@@ -170,14 +166,10 @@ $videos = array(
 							  <?php endif; ?>
 							</div>
 							<div class="accordion" accordion="singing">
-								Alex entered the world of singing as a chorister with the Angeles Chorale in 2007.
-								Performing Rachmaninoff's Vespers with this group solidified her love of vocal music, and
-								she has continued on to develop an extensive resume of vocal experience, from performing
-								Carmina Burana on a Greek island with 2,000 other singers in the Festival of the Aegean to
-								solo work with contemporary composer and guitarist Peter Yates. Alex's favorite type of
-								vocal performance, however, remains music written before 1650, as can be seen through her
-								involvement with early music groups such as <a href="http://www.jouyssance.org">Jouyssance</a> and the UCLA
-								Early Music Ensemble.
+								Over the last decade, Alex has developed extensive vocal experience, from performing Carmina Burana on a Greek island with 2,000 other singers in
+								the Festival of the Aegean to embodying one half of duo Guitaria with contemporary composer/guitarist Peter Yates.
+								Alex's favorite type of vocal performance, however, remains music written before 1650, as can be seen through her	involvement with
+								early music groups such as <a href="http://www.jouyssance.org">Jouyssance</a> and the UCLA Early Music Ensemble.
 							  <?php if ($videos['singing']) : ?>
 								<div class="centerHolder small">
 									<div class="arrow left">
@@ -197,10 +189,10 @@ $videos = array(
 							  <?php endif; ?>
 							</div>
 							<div class="accordion" accordion="conducting">
-								Alex has worked as Director of Choral Activities and Conductor at American
-								Lutheran Church in Burbank, after training as a choral conductor with Director of UCLA Choral
-								Activities Donald Neuen and Director of Towson University Choral Activities Arian Khaefi. She
-								has also studied orchestral conducting with Dr. James Smith.
+								Alex has worked as Director of Choral Activities and Conductor at American Lutheran Church in Burbank, after training as a choral conductor
+								with Director of UCLA Choral Activities Donald Neuen and Director of Towson University Choral Activities Arian Khaefi.
+								She has also studied orchestral conducting with Dr. James Smith.
+								Alex spent the 2013-2014 season as Managing Director/Conductor of the UCLA Early Music Ensemble through a year-long Teaching Assistantship.
 							  <?php if ($videos['conducting']) : ?>
 								<div class="centerHolder small">
 									<div class="arrow left">
@@ -220,12 +212,9 @@ $videos = array(
 							  <?php endif; ?>
 							</div>
 							<div class="accordion" accordion="theater">
-								Alex has been heavily involved with theater since her pre-teen years. After starring in
-								<cite>Little Shop of Horrors</cite> as a 12-year old at Emerson Middle School, she went on to a successful
-								career as a performer at University High School, playing such roles as The Artful Dodger
-								(<cite>Oliver!</cite>), the Emcee (<cite>Cabaret</cite>), Ada (<cite>Criminal Hearts</cite>), and Eponine (<cite>Les Miserables</cite>). She
-								has also directed a production of <cite>The Glass Menagerie</cite>, and is currently producing and music
-								directing a 2012 alumni performance of <cite>RENT</cite> at her alma mater.
+                Alex has been heavily involved with theater since her pre-teen years.
+                After starring in <cite>Little Shop of Horrors</cite> as a 12-year old at Emerson Middle School, she went on to a successful career as a performer at University High School, playing such roles as The Artful Dodger (<cite>Oliver!</cite>), the Emcee (<cite>Cabaret</cite>), Ada (<cite>Criminal Hearts</cite>), and Eponine (<cite>Les Miserables</cite>).
+                In 2009, she directed a production of <cite>the Glass Menagerie</cite>, and produced & acted in an alumni performance of <cite>RENT</cite> to raise money for her alma mater's drama department in 2012.
 								<div class="centerHolder small">
 									<div class="arrow left">
 										<img src="<?php echo IMG; ?>/arrow_left.png" />
