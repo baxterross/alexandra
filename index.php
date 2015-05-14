@@ -14,7 +14,7 @@ else
 
 $videos = array(
 	'piano' => array(
-        'Grabarchuk' => 'RUHbhxdAoEQ',
+    'Grabarchuk' => 'RUHbhxdAoEQ',
  		'Zelenka' => 'Me8PZTvI9nY',
 		'Cimarosa' => 'PZi9_yG21ds',
 		'Brouwer' => 'mBve8yaKC9Q',
@@ -22,45 +22,29 @@ $videos = array(
 	),
 	'singing' => array(
 	  'Monteverdi -- Voglio di vita uscir' => 'CbsdwzR9qEc',
-	  'Somewhere I have never travelled, gladly beyond' => 'lK5RoMh2eU4',
-	  'GuitAria play Cima' => 'yDkkre8LiL8',
-	  'Datvebis Gundi' => 'xeo2PLGVLfU',
-	  'i carry your heart with me' => 'A1flg7z-T8E',
-		'Dowland' => 'kmAb16PBhQI',
-		'Alabama Vest' => 'BCd9NSsMXrI',
-		'Hassler' => 'ZKKLMJnVIdY',
-		'Con Que La Lavare' => 's5G_2UqPTwo',
-		'Singing Jouy trio' => 'gaPOju4y18w',
-		'Anything Less' => 'tcMyPuiSY9o',
-		'Palestrina' => 'wevJ3fn4pEU',
-		'Josquin' => 'qvV54AG7Svs',
-		'Ray Says' => 'SERLpNVrbyo',
-		'Machaut' => 'WZhEiV6Peys',
-		'Be Kind to Strangers' => 'kLUJrMm3Ex4',
-		'Jouyssance' => '_d2G-dcZHVg',
-		'No Me Hableys' => 'M_xGflYUxOA',
-		'Lang' => 'zR_bs9aSlWg',
-		'Morenica' => '9NoIrYJe05I',
-		'Is That It, GuitAria, Kafka' => 'LSfd9DeTTPQ'
+	  'Elia Lrde ~ Datvebis Gundi' => 'xeo2PLGVLfU',
+	  'Peter Yates\' song Alabama Vest' => 'BCd9NSsMXrI',
+	  'Hans Leo Hassler -- Cantate Domino' => 'ZKKLMJnVIdY',
+	  'Dowland -- Come Heavy Sleep' => 'kmAb16PBhQI'
 	),
 	'conducting' => array(
-        'Bortniansky' => '5bhzcCOaLZ0',
-        'Handel' => 'dwguYiRgx5w',
-        'Lotti' => 'H9N1qGiCRJ8',
-        'Angel Pastyrem Movil' => '8V5YvDyoTmY',
-        'Queen Anne' => 'h4tXbhcm6s8',
-        'Cyprian Bazylik' => 'eLEnZAPZiPQ'
-    ),
+    'Bortniansky' => '5bhzcCOaLZ0',
+    'Handel' => 'dwguYiRgx5w',
+    'Lotti' => 'H9N1qGiCRJ8',
+    'Angel Pastyrem Movil' => '8V5YvDyoTmY',
+    'Queen Anne' => 'h4tXbhcm6s8',
+    'Cyprian Bazylik' => 'eLEnZAPZiPQ'
+  ),
 	'theater' => array(
 	),
 	'meditation' => array(
-        'Initial Impression' => 'Id1q2n-iOlk',
-        'Day 2' => 'NJJovQjkIng',
-        'Day 4' => 'GWRbTVbmfzw',
-        'Day 6' => 'R5Ik1GlLF9Y',
-        'Day 7' => '_VuBbrV8nqM',
-        'Wrap Up' => '_SvKzKXvtME'
-    )
+    'Initial Impression' => 'Id1q2n-iOlk',
+    'Day 2' => 'NJJovQjkIng',
+    'Day 4' => 'GWRbTVbmfzw',
+    'Day 6' => 'R5Ik1GlLF9Y',
+    'Day 7' => '_VuBbrV8nqM',
+    'Wrap Up' => '_SvKzKXvtME'
+  )
 );
 
 ?>
