@@ -21,6 +21,9 @@ $videos = array(
 		'Cima' => '8sXqJhTXciM'
 	),
 	'singing' => array(
+	  'GuitAria' => 'yDkkre8LiL8',
+	  'Datvebis Gundi' => 'xeo2PLGVLfU',
+	  'i carry your heart with me' => 'A1flg7z-T8E',
 		'Dowland' => 'kmAb16PBhQI',
 		'Alabama Vest' => 'BCd9NSsMXrI',
 		'Hassler' => 'ZKKLMJnVIdY',
