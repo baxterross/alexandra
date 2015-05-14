@@ -21,7 +21,9 @@ $videos = array(
 		'Cima' => '8sXqJhTXciM'
 	),
 	'singing' => array(
-	  'GuitAria' => 'yDkkre8LiL8',
+	  'Monteverdi -- Voglio di vita uscir' => 'CbsdwzR9qEc',
+	  'Somewhere I have never travelled, gladly beyond' => 'lK5RoMh2eU4',
+	  'GuitAria play Cima' => 'yDkkre8LiL8',
 	  'Datvebis Gundi' => 'xeo2PLGVLfU',
 	  'i carry your heart with me' => 'A1flg7z-T8E',
 		'Dowland' => 'kmAb16PBhQI',
@@ -39,7 +41,7 @@ $videos = array(
 		'No Me Hableys' => 'M_xGflYUxOA',
 		'Lang' => 'zR_bs9aSlWg',
 		'Morenica' => '9NoIrYJe05I',
-		'GuitAria' => 'LSfd9DeTTPQ'
+		'Is That It, GuitAria, Kafka' => 'LSfd9DeTTPQ'
 	),
 	'conducting' => array(
         'Bortniansky' => '5bhzcCOaLZ0',
