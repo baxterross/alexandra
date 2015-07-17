@@ -229,9 +229,9 @@ $videos = array(
 					<div class="contentInner">
 						<div id="teaching">
 						  <p>
-							  Alex has had 5+ years of teaching experience at UCLA, working with diverse student populations ranging from undergraduates to senior citizens.
-							  As an Instructor and Teaching Associate, she has led courses ranging from Electronic Dance Music to History of Baroque Opera.
-							  She will be starting a Visiting Lecturer position at Scripps College (Claremont, CA) in September 2015.
+                Alex has had 5+ years of teaching experience at UCLA, working with diverse student populations ranging from undergraduates to senior citizens.
+                As an Instructor and Teaching Associate, she has led courses such as Electronic Dance Music, History of Baroque Opera, and Music & Film.
+                She will be starting a Visiting Lecturer position at Scripps College (Claremont, CA) in September 2015.
 						  </p>
 					    <?php if ($videos['teaching']) : ?>
 						  <div class="centerHolder">
