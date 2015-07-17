@@ -5,7 +5,7 @@ $pages = array(
 	'home',
 	'performance',
 	'academe',
-	'meditation'
+	'teaching'
 );
 if (isset($_GET['p']) && in_array($_GET['p'], $pages))
 	$page = $_GET['p'];
@@ -37,13 +37,8 @@ $videos = array(
   ),
 	'theater' => array(
 	),
-	'meditation' => array(
-    'Initial Impression' => 'Id1q2n-iOlk',
-    'Day 2' => 'NJJovQjkIng',
-    'Day 4' => 'GWRbTVbmfzw',
-    'Day 6' => 'R5Ik1GlLF9Y',
-    'Day 7' => '_VuBbrV8nqM',
-    'Wrap Up' => '_SvKzKXvtME'
+	'teaching' => array(
+    'Y--IWQgcmIA'
   )
 );
 
@@ -69,7 +64,7 @@ $videos = array(
 			<div class="img" page="academe">
 				<img src="<?php echo IMG; ?>/academe.png" page="academe" />
 			</div>
-			<div class="img" page="meditation">
+			<div class="img" page="teaching">
 			</div>
 			<div class="img" page="performance">
 				<img src="<?php echo IMG; ?>/performance.png" page="performance" />
@@ -97,7 +92,7 @@ $videos = array(
 						</p>
 						<div class="centerHolder">
 							<div class="centerContent">
-								<a id="cv" href="<?php echo SITE; ?>/grabarchuk%20cv.pdf" target="_blank">curriculum vitae</a>
+								<a id="cv" class="download-link" href="<?php echo SITE; ?>/grabarchuk%20cv.pdf" target="_blank">curriculum vitae</a>
 							</div>
 						</div>
 					</div>
@@ -229,33 +224,29 @@ $videos = array(
 				</div>
 				<a class="menuLink" href="performance">Performance</a>
 			</div>
-			<div class="contentWrapper third" page="meditation">
+			<div class="contentWrapper third" page="teaching">
 				<div class="contentDrawer">
 					<div class="contentInner">
-						<p>
-							In September of 2014, Alex undertook a week-long challenge which involved meditating for 4 hours daily.
-							Below are the before & after videos, as well as post-meditation updates during the journey itself.
-						</p>
-					  <?php if ($videos['meditation']) : ?>
-						<div class="centerHolder small">
-							<div class="arrow left">
-								<img src="<?php echo IMG; ?>/arrow_left.png" />
-							</div>
-							<div class="centerContent">
-								<div class="slider">
-									<?php foreach ($videos['meditation'] as $name => $identifier) : ?>
-										<a class="fancyvideo" rel="meditation" href="<?php echo getVideoUrl($identifier); ?>"><img src="<?php echo getVideoThumbnail($identifier); ?>" class="video" alt="" /></a>
-									<?php endforeach; ?>
-								</div>
-							</div>
-							<div class="arrow right">
-								<img src="<?php echo IMG; ?>/arrow_right.png" />
-							</div>
-						</div>
-					  <?php endif; ?>
+						<div id="teaching">
+						  <p>
+							  Alex has had 5+ years of teaching experience at UCLA, working with diverse student populations ranging from undergraduates to senior citizens.
+							  As an Instructor and Teaching Associate, she has led courses ranging from Electronic Dance Music to History of Baroque Opera.
+							  She will be starting a Visiting Lecturer position at Scripps College (Claremont, CA) in September 2015.
+						  </p>
+					    <?php if ($videos['teaching']) : ?>
+						  <div class="centerHolder">
+						    <?php foreach ($videos['teaching'] as $name => $identifier) : ?>
+							    <a class="fancyvideo" rel="teaching" href="<?php echo getVideoUrl($identifier); ?>"><img src="<?php echo getVideoThumbnail($identifier); ?>" class="video" alt="" /></a>
+						    <?php endforeach; ?>
+						  </div>
+					    <?php endif; ?>
+						  <div class="centerHolder">
+							  <a id="teaching-philosophy" class="download-link" href="<?php echo SITE; ?>/grabarchuk%20teaching%20philosophy.pdf" target="_blank">teaching philosophy</a>
+					    </div>
+					  </div>
 					</div>
 				</div>
-				<a class="menuLink" href="meditation">Meditation</a>
+				<a class="menuLink" href="teaching">Teaching</a>
 			</div>
 		</div>
 		<div id="contactInfo">

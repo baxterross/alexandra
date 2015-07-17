@@ -127,8 +127,8 @@ a {
 				.contentInner .centerHolder.small .centerContent {
 					height:150px;
 				}
-					.contentInner .centerContent .headshot,
-					.contentInner .centerContent .video {
+					.contentInner .headshot,
+					.contentInner .video {
 						margin:0 6px 0 4px;
 						display:inline-block;
 						max-width:150px;
@@ -136,14 +136,9 @@ a {
 						border-radius:10px;
 						box-shadow:2px 2px 8px 1px #444;
 					}
-					.contentInner .centerContent .mixed .headshot,
-					.contentInner .centerContent .mixed .video {
+					.contentInner .mixed .headshot,
+					.contentInner .mixed .video {
 						max-height:100px;
-					}
-					.contentInner .centerContent #cv {
-						font-size:18px;
-						color:#444;
-						font-weight:bold;
 					}
 		.menuLink {
 			position:relative;
@@ -170,6 +165,12 @@ a {
 		text-decoration:none;
 	}
 
+.download-link {
+	font-size:18px;
+	color:#444;
+	font-weight:bold;
+}
+
 /* -- performance page -- */
 #performance {
 	padding:15px 0 0;
@@ -191,4 +192,9 @@ ul.menu {
 }
 .accordion {
 	display:none;
+}
+
+/* -- teaching page -- */
+#teaching .video {
+  max-width: 240px;
 }
