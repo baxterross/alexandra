@@ -151,11 +151,19 @@ a {
 			letter-spacing:5px;
 		}
 
+.quotes {
+  position: relative;
+}
 .quote {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
   font-size: 13px;
   font-style: italic;
   line-height: 18px;
   white-space: normal;
+  transition: opacity 1s;
 }
 .quote:before, .quote:after {
   display: inline;

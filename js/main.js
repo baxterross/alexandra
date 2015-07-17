@@ -76,11 +76,10 @@ function QuoteHandler(holder) {
 }
 QuoteHandler.prototype = {
   init: function(holder) {
-    this.quotes = $(holder)[0].children;
     this.index = 0;
-    [].map.call(this.quotes, this.hideQuote.bind(this));
+    this.quotes = $(holder)[0].children;
     this.showQuote(this.quotes[this.index]);
-    this.interval = window.setInterval(this.advance.bind(this), 6000);
+    this.interval = window.setInterval(this.advance.bind(this), 10 * 1000);
   },
   advance: function() {
     this.hideQuote(this.quotes[this.index]);
@@ -89,10 +88,10 @@ QuoteHandler.prototype = {
     this.showQuote(this.quotes[this.index]);
   },
   showQuote: function(quote) {
-    quote.style.display = 'block';
+    quote.style.opacity = 1;
   },
   hideQuote: function(quote) {
-    quote.style.display = 'none';
+    quote.style.opacity = 0;
   }
 };
 
