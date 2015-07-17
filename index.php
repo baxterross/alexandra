@@ -243,6 +243,13 @@ $videos = array(
 						  <div class="centerHolder">
 							  <a id="teaching-philosophy" class="download-link" href="<?php echo SITE; ?>/grabarchuk%20teaching%20philosophy.pdf" target="_blank">teaching philosophy</a>
 					    </div>
+						  <div class="centerHolder quotes">
+						    <div class="quote">Finest GE professor I’ve ever had the pleasure of meeting and taking a course with.</div>
+						    <div class="quote">Ms. Grabarchuk gave superior lectures, well-integrated with media, and answered questions graciously and thoroughly...</div>
+						    <div class="quote">Alex’s teaching style is one where open dialogue is encouraged and fostered not only among instructor and student but students with each other.</div>
+						    <div class="quote">She is all you could ask for in a teacher.</div>
+						    <div class="quote">Alex possesses a certain authority when teaching that makes students look up to her and trust her, and she shows a zeal for the material that brings it into a relatable, interesting, accessible light.</div>
+					    </div>
 					  </div>
 					</div>
 				</div>

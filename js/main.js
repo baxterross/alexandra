@@ -71,6 +71,31 @@ function accordionClick(event) {
 	drawer.siblings('.accordion').slideUp();
 }
 
+function QuoteHandler(holder) {
+  this.init(holder);
+}
+QuoteHandler.prototype = {
+  init: function(holder) {
+    this.quotes = $(holder)[0].children;
+    this.index = 0;
+    [].map.call(this.quotes, this.hideQuote.bind(this));
+    this.showQuote(this.quotes[this.index]);
+    this.interval = window.setInterval(this.advance.bind(this), 6000);
+  },
+  advance: function() {
+    this.hideQuote(this.quotes[this.index]);
+    if (++this.index == this.quotes.length)
+      this.index = 0;
+    this.showQuote(this.quotes[this.index]);
+  },
+  showQuote: function(quote) {
+    quote.style.display = 'block';
+  },
+  hideQuote: function(quote) {
+    quote.style.display = 'none';
+  }
+};
+
 $(document).ready(function() {
 	$('a.menuLink').click(switchPage);
 	var page = $('body').attr('page');
@@ -82,4 +107,5 @@ $(document).ready(function() {
 	});
 	$('.accordionTrigger').click(accordionClick);
 	$('.accordionTrigger[accordion=piano]').click();
+  var quoteScoller = new QuoteHandler($('#teaching .quotes'));
 });

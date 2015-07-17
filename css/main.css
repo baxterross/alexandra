@@ -151,6 +151,35 @@ a {
 			letter-spacing:5px;
 		}
 
+.quote {
+  font-size: 13px;
+  font-style: italic;
+  line-height: 18px;
+  white-space: normal;
+}
+.quote:before, .quote:after {
+  display: inline;
+  font-size: 40px;
+  position: relative;
+  top: 16px;
+  font-weight: bold;
+  color: #999;
+}
+.quote:before {
+  content: "“";
+  right: 3px;
+}
+.quote:after {
+  content: "”";
+  left: 3px;
+}
+
+.download-link {
+	font-size:18px;
+	color:#444;
+	font-weight:bold;
+}
+
 #contactInfo {
 	position:fixed;
 	bottom:0;
@@ -164,12 +193,6 @@ a {
 	#contactInfo a {
 		text-decoration:none;
 	}
-
-.download-link {
-	font-size:18px;
-	color:#444;
-	font-weight:bold;
-}
 
 /* -- performance page -- */
 #performance {
