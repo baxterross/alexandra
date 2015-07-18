@@ -14,13 +14,14 @@ html, body {
 a {
 	font-weight:bold;
 	color:inherit;
+	transition:opacity 200ms, color 200ms;
 }
-	a:hover {
-		opacity:.8;
-	}
-	a.active:hover {
-	  opacity:1;
-	}
+a:hover {
+	opacity:.8;
+}
+a.active:hover {
+  opacity:1;
+}
 
 /* left */
 #left {
