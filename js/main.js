@@ -63,8 +63,8 @@ function scrollCenterContent(event) {
 function accordionClick(event) {
 	var trigger = $(this);
 	var triggers = $('.accordionTrigger').not(trigger);
-	trigger.fadeTo(240, 0.8);
-	triggers.fadeTo(240, 1);
+	trigger.addClass('active');
+	triggers.removeClass('active');
 	var accordion = trigger.attr('accordion');
 	var drawer = $('.accordion[accordion='+accordion+']');
 	drawer.slideDown();

@@ -18,6 +18,9 @@ a {
 	a:hover {
 		opacity:.8;
 	}
+	a.active:hover {
+	  opacity:1;
+	}
 
 /* left */
 #left {
@@ -223,6 +226,9 @@ ul.menu {
 
 .accordionTrigger {
 	text-decoration:inherit;
+}
+.accordionTrigger.active {
+  color: #9d1e4b;
 }
 .accordion {
 	display:none;
