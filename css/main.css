@@ -90,7 +90,7 @@ a {
 				.contentInner p {
 					margin:40px 10px 10px;
 				}
-				.contentInner .centerHolder {
+				.centerHolder {
 					white-space:nowrap;
 					margin:0 auto;
 					padding:20px 0 0;
@@ -153,6 +153,7 @@ a {
 
 .quotes {
   position: relative;
+  padding-top: 16px;
 }
 .quote {
   opacity: 0;
@@ -186,6 +187,8 @@ a {
 	font-size:18px;
 	color:#444;
 	font-weight:bold;
+	display: block;
+	margin-top: 10px;
 }
 
 #contactInfo {
