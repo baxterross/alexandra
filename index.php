@@ -91,9 +91,7 @@ $videos = array(
 							In 2014, Alex became the newest score reader for the Metropolitan Opera's live HD broadcasts.
 						</p>
 						<div class="centerHolder">
-							<div class="centerContent">
-								<a id="cv" class="download-link" href="<?php echo SITE; ?>/grabarchuk%20cv.pdf" target="_blank">curriculum vitae</a>
-							</div>
+						  <a id="cv" class="download-link" href="<?php echo SITE; ?>/grabarchuk%20cv.pdf" target="_blank">curriculum vitae</a>
 						</div>
 					</div>
 				</div>
@@ -247,7 +245,7 @@ $videos = array(
 						  </div>
 					    <?php endif; ?>
 						  <div class="centerHolder">
-							  <a id="teaching-philosophy" class="download-link" href="<?php echo SITE; ?>/grabarchuk%20teaching%20philosophy.pdf" target="_blank">teaching philosophy</a>
+							  <a id="teaching-philosophy" class="download-link" href="<?php echo SITE; ?>/grabarchuk%20teaching%20philosophy.pdf" target="_blank">teaching statement</a>
 					    </div>
 						  <div class="centerHolder quotes">
 						    <div class="quote">Finest GE professor I’ve ever had the pleasure of meeting and taking a course with.</div>
