@@ -125,7 +125,7 @@ a {
 					white-space:nowrap;
 				}
 				.contentInner .centerHolder.small .centerContent {
-					height:150px;
+					height:135px;
 				}
 					.contentInner .headshot,
 					.contentInner .video {
@@ -163,7 +163,7 @@ a {
   font-style: italic;
   line-height: 18px;
   white-space: normal;
-  transition: opacity 1s;
+  transition: opacity 2s;
 }
 .quote:before, .quote:after {
   display: inline;

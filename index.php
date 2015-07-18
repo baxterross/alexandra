@@ -193,6 +193,12 @@ $videos = array(
 										<img src="<?php echo IMG; ?>/arrow_right.png" />
 									</div>
 								</div>
+								<div class="centerHolder quotes">
+								  <div class="quote">Alex was born to lead an ensemble of this sort… Musically, socially, and intellectually, it was truly a privilege to sing in the EME this year.</div>
+                  <div class="quote">An effective communicator who succeeds in creating a rehearsal space that is simultaneously fun and enjoyable, without sacrificing a single degree of musicality.</div>
+                  <div class="quote">Alex is an outstanding director. She leads an organized rehearsal, conducts clearly and expressively, and has great advice to give on everything from vocal technique to musical interpretation.</div>
+                  <div class="quote">Simultaneously a caring and commanding director. Able to create an atmosphere where musicians learn, buckle down and get to work, but also enjoy themselves, have fun, and enjoy camaraderie.</div>
+								</div>
 							  <?php endif; ?>
 							</div>
 							<div class="accordion" accordion="theater">

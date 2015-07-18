@@ -85,7 +85,7 @@ QuoteHandler.prototype = {
     this.hideQuote(this.quotes[this.index]);
     if (++this.index == this.quotes.length)
       this.index = 0;
-    this.showQuote(this.quotes[this.index]);
+    window.setTimeout(this.showQuote.bind(this, this.quotes[this.index]), 1000);
   },
   showQuote: function(quote) {
     quote.style.opacity = 1;
@@ -106,5 +106,6 @@ $(document).ready(function() {
 	});
 	$('.accordionTrigger').click(accordionClick);
 	$('.accordionTrigger[accordion=piano]').click();
-  var quoteScoller = new QuoteHandler($('#teaching .quotes'));
+  var teachingQuotes = new QuoteHandler($('#teaching .quotes'));
+  var conductingQuotes = new QuoteHandler($('.accordion[accordion=conducting] .quotes'));
 });
