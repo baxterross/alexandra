@@ -32,12 +32,6 @@ var stateChangeHandlers = {
     leave: []
   }
 };
-function stateChange(page) {
-  window.currentPage && fireHandlers(window.stateChangeHandlers[window.currentPage].leave, window.currentPage);
-	history.pushState({}, page, page);
-	window.currentPage = page;
-  fireHandlers(window.stateChangeHandlers[window.currentPage].enter, page)
-}
 function fireHandlers(handlers, page, tab) {
   handlers.map(function(handler) {
     handler(page, tab);
@@ -50,7 +44,11 @@ function switchPage(event) {
 	var wrapper = trigger.parents('.contentWrapper');
 	var page = wrapper.attr('page');
 	if (page != window.currentPage) {
-		window.stateChange(page);
+    window.currentPage && fireHandlers(window.stateChangeHandlers[window.currentPage].leave, window.currentPage);
+	  history.pushState({}, page, page);
+	  window.currentPage = page;
+    fireHandlers(window.stateChangeHandlers[window.currentPage].enter, page)
+
 		var image = $('#left .img[page='+page+']');
 		image.siblings('.img').fadeTo(300, 0, function() {
 			image.fadeTo(300, 1);
@@ -61,6 +59,7 @@ function switchPage(event) {
 			}, 300);
 */
 		});
+
 		if (page == 'home') {
 			var wrappers = wrapper.siblings('.contentWrapper');
 			wrappers.push(wrapper[0]);
