@@ -170,6 +170,9 @@ a.active:hover {
   white-space: normal;
   transition: opacity 2s;
 }
+.quote.visible {
+  opacity: 1;
+}
 .quote:before, .quote:after {
   display: inline;
   font-size: 40px;

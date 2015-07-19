@@ -1,11 +1,39 @@
+var stateChangeHandlers = {
+  home: {
+    enter: [],
+    leave: []
+  },
+  academe: {
+    enter: [],
+    leave: []
+  },
+  performance: {
+    enter: [],
+    leave: []
+  },
+  teaching: {
+    enter: [],
+    leave: []
+  }
+};
+function stateChange(page) {
+  window.currentPage && window.stateChangeHandlers[window.currentPage].leave.map(function(handler) {
+    handler(page);
+  });
+	history.pushState({}, page, page);
+	window.currentPage = page;
+  window.stateChangeHandlers[window.currentPage].enter.map(function(handler) {
+    handler(page);
+  });
+}
+
 function switchPage(event) {
 	event.preventDefault();
 	var trigger = $(event.currentTarget);
 	var wrapper = trigger.parents('.contentWrapper');
 	var page = wrapper.attr('page');
 	if (page != window.currentPage) {
-		window.currentPage = page;
-		history.pushState({}, page, page)
+		window.stateChange(page);
 		var image = $('#left .img[page='+page+']');
 		image.siblings('.img').fadeTo(300, 0, function() {
 			image.fadeTo(300, 1);
@@ -71,31 +99,50 @@ function accordionClick(event) {
 	drawer.siblings('.accordion').slideUp();
 }
 
-function QuoteHandler(holder) {
-  this.init(holder);
+function QuoteHandler(holder, page) {
+  this.init(holder, page);
 }
 QuoteHandler.prototype = {
-  init: function(holder) {
+  init: function(holder, page) {
     this.index = 0;
     this.quotes = $(holder)[0].children;
-    this.showQuote(this.quotes[this.index]);
+    this.interval = null;
+    window.stateChangeHandlers[page].enter.push(this.start.bind(this));
+    window.stateChangeHandlers[page].leave.push(this.stop.bind(this));
+  },
+  start: function() {
+    window.setTimeout(this.showQuote.bind(this, this.quotes[this.index]), 1 * 1000);
     this.interval = window.setInterval(this.advance.bind(this), 10 * 1000);
+  },
+  stop: function() {
+    if (this.interval) {
+      window.clearInterval(this.interval);
+      this.interval = null;
+    }
+    this.hideAllQuotes();
   },
   advance: function() {
     this.hideQuote(this.quotes[this.index]);
     if (++this.index == this.quotes.length)
       this.index = 0;
-    window.setTimeout(this.showQuote.bind(this, this.quotes[this.index]), 1000);
+    window.setTimeout(this.showQuote.bind(this, this.quotes[this.index]), 1 * 1000);
   },
   showQuote: function(quote) {
-    quote.style.opacity = 1;
+    quote.classList.add('visible');
   },
   hideQuote: function(quote) {
-    quote.style.opacity = 0;
+    quote.classList.remove('visible');
+  },
+  hideAllQuotes: function() {
+    for (var i = 0; i < this.quotes.length; i++) {
+      this.hideQuote(this.quotes[i]);
+    }
   }
 };
 
 $(document).ready(function() {
+  var teachingQuotes = new QuoteHandler($('#teaching .quotes'), 'teaching');
+  var conductingQuotes = new QuoteHandler($('.accordion[accordion=conducting] .quotes'), 'performance');
 	$('a.menuLink').click(switchPage);
 	var page = $('body').attr('page');
 	$('a.menuLink[href='+page+']').trigger('click');
@@ -106,6 +153,4 @@ $(document).ready(function() {
 	});
 	$('.accordionTrigger').click(accordionClick);
 	$('.accordionTrigger[accordion=piano]').click();
-  var teachingQuotes = new QuoteHandler($('#teaching .quotes'));
-  var conductingQuotes = new QuoteHandler($('.accordion[accordion=conducting] .quotes'));
 });
