@@ -41,9 +41,12 @@ function fireHandlers(handlers, page, tab) {
 function switchPage(event) {
 	event.preventDefault();
 	var trigger = $(event.currentTarget);
+	var triggers = $('.menuLink').not(trigger);
 	var wrapper = trigger.parents('.contentWrapper');
 	var page = wrapper.attr('page');
 	if (page != window.currentPage) {
+	  triggers.removeClass('active');
+	  trigger.addClass('active');
     window.currentPage && fireHandlers(window.stateChangeHandlers[window.currentPage].leave, window.currentPage);
 	  history.pushState({}, page, page);
 	  window.currentPage = page;

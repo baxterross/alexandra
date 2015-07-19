@@ -154,6 +154,9 @@ a.active:hover {
 			font-size:18px;
 			letter-spacing:5px;
 		}
+		.menuLink.active {
+      color: #9d1e4b;
+		}
 
 .quotes {
   position: relative;
