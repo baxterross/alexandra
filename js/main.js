@@ -9,7 +9,23 @@ var stateChangeHandlers = {
   },
   performance: {
     enter: [],
-    leave: []
+    leave: [],
+    piano: {
+      enter: [],
+      leave: []
+    },
+    singing: {
+      enter: [],
+      leave: []
+    },
+    conducting: {
+      enter: [],
+      leave: []
+    },
+    theater: {
+      enter: [],
+      leave: []
+    }
   },
   teaching: {
     enter: [],
@@ -17,13 +33,14 @@ var stateChangeHandlers = {
   }
 };
 function stateChange(page) {
-  window.currentPage && window.stateChangeHandlers[window.currentPage].leave.map(function(handler) {
-    handler(page);
-  });
+  window.currentPage && fireHandlers(window.stateChangeHandlers[window.currentPage].leave, window.currentPage);
 	history.pushState({}, page, page);
 	window.currentPage = page;
-  window.stateChangeHandlers[window.currentPage].enter.map(function(handler) {
-    handler(page);
+  fireHandlers(window.stateChangeHandlers[window.currentPage].enter, page)
+}
+function fireHandlers(handlers, page, tab) {
+  handlers.map(function(handler) {
+    handler(page, tab);
   });
 }
 
@@ -89,26 +106,35 @@ function scrollCenterContent(event) {
 }
 
 function accordionClick(event) {
-	var trigger = $(this);
-	var triggers = $('.accordionTrigger').not(trigger);
+	var trigger = $(this),
+	    triggers = $('.accordionTrigger').not(trigger),
+	    previousAccordion = triggers.filter('.active').attr('accordion'),
+	    accordion = trigger.attr('accordion'),
+	    drawer = $('.accordion[accordion='+accordion+']'),
+	    drawers = drawer.siblings('.accordion');
+
 	trigger.addClass('active');
 	triggers.removeClass('active');
-	var accordion = trigger.attr('accordion');
-	var drawer = $('.accordion[accordion='+accordion+']');
+
 	drawer.slideDown();
-	drawer.siblings('.accordion').slideUp();
+	drawers.slideUp();
+
+	previousAccordion && fireHandlers(window.stateChangeHandlers['performance'][previousAccordion].leave, 'performance', previousAccordion);
+	fireHandlers(window.stateChangeHandlers['performance'][accordion].enter, 'performance', accordion);
 }
 
-function QuoteHandler(holder, page) {
-  this.init(holder, page);
+function QuoteHandler(holder, page, tab) {
+  this.init(holder, page, tab);
 }
 QuoteHandler.prototype = {
-  init: function(holder, page) {
+  init: function(holder, page, tab) {
     this.index = 0;
     this.quotes = $(holder)[0].children;
     this.interval = null;
-    window.stateChangeHandlers[page].enter.push(this.start.bind(this));
-    window.stateChangeHandlers[page].leave.push(this.stop.bind(this));
+    var handlers = window.stateChangeHandlers[page];
+    handlers = tab && handlers[tab] || handlers;
+    handlers.enter.push(this.start.bind(this));
+    handlers.leave.push(this.stop.bind(this));
   },
   start: function() {
     window.setTimeout(this.showQuote.bind(this, this.quotes[this.index]), 1 * 1000);
@@ -142,7 +168,7 @@ QuoteHandler.prototype = {
 
 $(document).ready(function() {
   var teachingQuotes = new QuoteHandler($('#teaching .quotes'), 'teaching');
-  var conductingQuotes = new QuoteHandler($('.accordion[accordion=conducting] .quotes'), 'performance');
+  var conductingQuotes = new QuoteHandler($('.accordion[accordion=conducting] .quotes'), 'performance', 'conducting');
 	$('a.menuLink').click(switchPage);
 	var page = $('body').attr('page');
 	$('a.menuLink[href='+page+']').trigger('click');
