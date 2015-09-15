@@ -148,12 +148,6 @@ $videos = array(
 								<li>
 									<a href="javascript:void(0);" class="accordionTrigger" accordion="conducting">Conducting</a>
 								</li>
-								<li>
-								|
-								</li>
-								<li>
-									<a href="javascript:void(0);" class="accordionTrigger" accordion="theater">Theater</a>
-								</li>
 							</ul>
 							<div class="accordion" accordion="piano">
 								Having received a thorough education in both piano performance and music theory, Alex is an ardent pianist who loves keyboards of all sorts,
@@ -231,30 +225,6 @@ $videos = array(
                   <div class="quote">Simultaneously a caring and commanding director. Able to create an atmosphere where musicians learn, buckle down and get to work, but also enjoy themselves, have fun, and enjoy camaraderie.</div>
 								</div>
 							  <?php endif; ?>
-							</div>
-							<div class="accordion" accordion="theater">
-                Alex has been heavily involved with theater since her pre-teen years.
-                After starring in <cite>Little Shop of Horrors</cite> as a 12-year old at Emerson Middle School, she went on to a successful career as a performer at University High School, playing such roles as The Artful Dodger (<cite>Oliver!</cite>), the Emcee (<cite>Cabaret</cite>), Ada (<cite>Criminal Hearts</cite>), and Eponine (<cite>Les Miserables</cite>).
-                In 2009, she directed a production of <cite>the Glass Menagerie</cite>, and produced & acted in an alumni performance of <cite>RENT</cite> to raise money for her alma mater's drama department in 2012.
-								<div class="centerHolder small">
-									<div class="arrow left">
-										<img src="<?php echo IMG; ?>/arrow_left.png" />
-									</div>
-									<div class="centerContent">
-										<div class="slider">
-											<a class="fancyvideo" rel="theater" href="<?php echo getVideoUrl('buDgb7X3pYc'); ?>"><img src="<?php echo getVideoThumbnail('buDgb7X3pYc'); ?>" class="video" alt="" /></a>
-											<a class="fancybox mixed" rel="theater" href="<?php echo IMG; ?>/theater/1.jpg"><img src="<?php echo IMG; ?>/theater/1.thumb.jpg" class="video" alt="" /></a>
-											<a class="fancybox mixed" rel="theater" href="<?php echo IMG; ?>/theater/2.jpg"><img src="<?php echo IMG; ?>/theater/2.thumb.jpg" class="video" alt="" /></a>
-											<a class="fancyvideo" rel="theater" href="<?php echo getVideoUrl('VSotF2_yu1I'); ?>"><img src="<?php echo getVideoThumbnail('VSotF2_yu1I'); ?>" class="video" alt="" /></a>
-											<a class="fancybox mixed" rel="theater" href="<?php echo IMG; ?>/theater/3.jpg"><img src="<?php echo IMG; ?>/theater/3.thumb.jpg" class="video" alt="" /></a>
-											<a class="fancybox mixed" rel="theater" href="<?php echo IMG; ?>/theater/4.jpg"><img src="<?php echo IMG; ?>/theater/4.thumb.jpg" class="video" alt="" /></a>
-											<a class="fancybox mixed" rel="theater" href="<?php echo IMG; ?>/theater/5.jpg"><img src="<?php echo IMG; ?>/theater/5.thumb.jpg" class="video" alt="" /></a>
-										</div>
-									</div>
-									<div class="arrow right">
-										<img src="<?php echo IMG; ?>/arrow_right.png" />
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
