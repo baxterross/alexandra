@@ -97,7 +97,38 @@ $videos = array(
 				</div>
 				<a class="menuLink" href="academe">Academe</a>
 			</div>
-			<div class="contentWrapper second" page="performance">
+			<div class="contentWrapper second" page="teaching">
+				<div class="contentDrawer">
+					<div class="contentInner">
+						<div id="teaching">
+						  <p>
+                Alex is currently a Visiting Lecturer of Joint Music at the Claremont University Consortium, teaching at Scripps College.
+                She has also had 5+ years of teaching experience at UCLA, working with diverse student populations from undergraduates to senior citizens.
+                Her teaching portfolio includes classes such as Electronic Dance Music, History of Baroque Opera, and Music & Film.
+						  </p>
+					    <?php if ($videos['teaching']) : ?>
+						  <div class="centerHolder">
+						    <?php foreach ($videos['teaching'] as $name => $identifier) : ?>
+							    <a class="fancyvideo" rel="teaching" href="<?php echo getVideoUrl($identifier); ?>"><img src="<?php echo getVideoThumbnail($identifier); ?>" class="video" alt="" /></a>
+						    <?php endforeach; ?>
+						  </div>
+					    <?php endif; ?>
+						  <div class="centerHolder">
+							  <a id="teaching-philosophy" class="download-link" href="<?php echo SITE; ?>/grabarchuk%20teaching%20philosophy.pdf" target="_blank">teaching statement</a>
+					    </div>
+						  <div class="centerHolder quotes">
+						    <div class="quote">Finest GE professor I’ve ever had the pleasure of meeting and taking a course with.</div>
+						    <div class="quote">Ms. Grabarchuk gave superior lectures, well-integrated with media, and answered questions graciously and thoroughly...</div>
+						    <div class="quote">Alex’s teaching style is one where open dialogue is encouraged and fostered not only among instructor and student but students with each other.</div>
+						    <div class="quote">She is all you could ask for in a teacher.</div>
+						    <div class="quote">Alex possesses a certain authority when teaching that makes students look up to her and trust her, and she shows a zeal for the material that brings it into a relatable, interesting, accessible light.</div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+				<a class="menuLink" href="teaching">Teaching</a>
+			</div>
+			<div class="contentWrapper third" page="performance">
 				<div class="contentDrawer">
 					<div class="contentInner">
 						<div id="performance">
@@ -150,8 +181,10 @@ $videos = array(
 							<div class="accordion" accordion="singing">
 								Over the last decade, Alex has developed extensive vocal experience, from performing Carmina Burana on a Greek island with 2,000 other singers in
 								the Festival of the Aegean to embodying one half of duo Guitaria with contemporary composer/guitarist Peter Yates.
+                She also sings Bulgarian, Georgian, and other types of folk music from Eastern Europe. In 2015, she travelled to Bulgaria and performed at the 50th National Folklore Festival Koprivshtitsa Jubilee under the direction of <a href="http://durfee.org/awardee/tzvetanka-varimezova/" target="_blank">Tzvetanka Varimezova</a>.
 								Alex's favorite type of vocal performance, however, remains music written before 1650, as can be seen through her	involvement with
-								early music groups such as <a href="http://www.jouyssance.org">Jouyssance</a> and the UCLA Early Music Ensemble.
+								early music groups such as <a href="http://www.jouyssance.org" target="_blank">Jouyssance</a> and the UCLA Early Music Ensemble.
+                She is currently employed as the Alto Section Leader for the <a href="http://www.sgvccsingers.org/"  target="_blank">San Gabriel Valley Choral Company</a>.
 							  <?php if ($videos['singing']) : ?>
 								<div class="centerHolder small">
 									<div class="arrow left">
@@ -227,37 +260,6 @@ $videos = array(
 					</div>
 				</div>
 				<a class="menuLink" href="performance">Performance</a>
-			</div>
-			<div class="contentWrapper third" page="teaching">
-				<div class="contentDrawer">
-					<div class="contentInner">
-						<div id="teaching">
-						  <p>
-                Alex has had 5+ years of teaching experience at UCLA, working with diverse student populations ranging from undergraduates to senior citizens.
-                As an Instructor and Teaching Associate, she has led courses such as Electronic Dance Music, History of Baroque Opera, and Music & Film.
-                She will be starting a Visiting Lecturer position at Scripps College (Claremont, CA) in September 2015.
-						  </p>
-					    <?php if ($videos['teaching']) : ?>
-						  <div class="centerHolder">
-						    <?php foreach ($videos['teaching'] as $name => $identifier) : ?>
-							    <a class="fancyvideo" rel="teaching" href="<?php echo getVideoUrl($identifier); ?>"><img src="<?php echo getVideoThumbnail($identifier); ?>" class="video" alt="" /></a>
-						    <?php endforeach; ?>
-						  </div>
-					    <?php endif; ?>
-						  <div class="centerHolder">
-							  <a id="teaching-philosophy" class="download-link" href="<?php echo SITE; ?>/grabarchuk%20teaching%20philosophy.pdf" target="_blank">teaching statement</a>
-					    </div>
-						  <div class="centerHolder quotes">
-						    <div class="quote">Finest GE professor I’ve ever had the pleasure of meeting and taking a course with.</div>
-						    <div class="quote">Ms. Grabarchuk gave superior lectures, well-integrated with media, and answered questions graciously and thoroughly...</div>
-						    <div class="quote">Alex’s teaching style is one where open dialogue is encouraged and fostered not only among instructor and student but students with each other.</div>
-						    <div class="quote">She is all you could ask for in a teacher.</div>
-						    <div class="quote">Alex possesses a certain authority when teaching that makes students look up to her and trust her, and she shows a zeal for the material that brings it into a relatable, interesting, accessible light.</div>
-					    </div>
-					  </div>
-					</div>
-				</div>
-				<a class="menuLink" href="teaching">Teaching</a>
 			</div>
 		</div>
 		<div id="contactInfo">
