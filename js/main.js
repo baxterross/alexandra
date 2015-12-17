@@ -3,14 +3,14 @@ var stateChangeHandlers = {
     enter: [],
     leave: []
   },
-  academe: {
+  bio: {
     enter: [],
     leave: []
   },
   performance: {
     enter: [],
     leave: [],
-    piano: {
+    conducting: {
       enter: [],
       leave: []
     },
@@ -18,7 +18,7 @@ var stateChangeHandlers = {
       enter: [],
       leave: []
     },
-    conducting: {
+    piano: {
       enter: [],
       leave: []
     },
@@ -180,5 +180,5 @@ $(document).ready(function() {
 		'type' : 'iframe'
 	});
 	$('.accordionTrigger').click(accordionClick);
-	$('.accordionTrigger[accordion=piano]').click();
+	$('.accordionTrigger[accordion=conducting]').click();
 });

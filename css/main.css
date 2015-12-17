@@ -53,13 +53,13 @@ a.active:hover {
 	z-index:3;
 }
 	.first .menuLink {
-		left:165px;
+		left:185px;
 	}
 .second {
 	z-index:2;
 }
 	.second .menuLink {
-		left:365px;
+		left:340px;
 	}
 .third {
 	z-index:1;

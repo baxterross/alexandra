@@ -4,7 +4,7 @@ include('defs.php');
 $pages = array(
 	'home',
 	'performance',
-	'academe',
+	'bio',
 	'teaching'
 );
 if (isset($_GET['p']) && in_array($_GET['p'], $pages))
@@ -14,11 +14,11 @@ else
 
 $videos = array(
 	'piano' => array(
-    'Grabarchuk' => 'RUHbhxdAoEQ',
- 		'Zelenka' => 'Me8PZTvI9nY',
-		'Cimarosa' => 'PZi9_yG21ds',
 		'Brouwer' => 'mBve8yaKC9Q',
-		'Cima' => '8sXqJhTXciM'
+		'Cimarosa' => 'PZi9_yG21ds',
+	        'Grabarchuk' => 'RUHbhxdAoEQ',
+		'Cima' => '8sXqJhTXciM',
+ 		'Zelenka' => 'Me8PZTvI9nY'
 	),
 	'singing' => array(
 	  'Monteverdi -- Voglio di vita uscir' => 'CbsdwzR9qEc',
@@ -61,8 +61,8 @@ $videos = array(
 			<div class="img" page="home">
 				<img src="<?php echo IMG; ?>/home.png" page="home" />
 			</div>
-			<div class="img" page="academe">
-				<img src="<?php echo IMG; ?>/academe.png" page="academe" />
+			<div class="img" page="bio">
+				<img src="<?php echo IMG; ?>/academe.png" page="bio" />
 			</div>
 			<div class="img" page="teaching">
 			</div>
@@ -74,28 +74,26 @@ $videos = array(
 			<div class="contentWrapper home" page="home">
 				<a class="menuLink" href="home">Home</a>
 			</div>
-			<div class="contentWrapper first" page="academe">
+			<div class="contentWrapper first" page="bio">
 				<div class="contentDrawer">
 					<div class="contentInner">
 						<p>
-							Alex is currently a PhD candidate in the Musicology Department at UCLA, working on a dissertation titled "The Soundtrack of Stagnation: Paradoxes within Soviet Pop and Rock Music of the 1970s" with the help of an Alvin H. Johnson AMS 50 Dissertation Fellowship Award as well as a UCLA Dissertation Year Fellowship.
-							She received her B.A. in Linguistics with a minor in Music History from UCLA, graduating summa cum laude in 2009, and went on to receive an M.A. in Musicology from UCLA in 2011.
-							She is a published author, having seen the appearance of her first article,
-							"The Finality of Stories Such as These: Exploring Concept and Narrative in Stephen Sondheim's Into the Woods"
-							in the 2012 edited volume <cite>From Stage to Screen</cite>, the 18th installment of "Speculum Musicae" (Brepols Publishers),
-							a series of the Centro Studi Opera Omnia Luigi Boccherini of Lucca.
-							She has presented at international conferences held	in Tuscany and Helsinki, as well as
-							the 2012 national meeting of the American Musicological Society/Society of Music Theory/Society for Ethnomusicology held in New Orleans.
-							Fluent in Russian, she has recently worked on translating previously unpublished sources and doing
-							complete Russian-to-English transliteration work for Tamara Levitz's 2012 book <cite>Modernist Mysteries: Pers&eacute;phone</cite>.
-							In 2014, Alex became the newest score reader for the Metropolitan Opera's live HD broadcasts.
+							Alexandra Grabarchuk, PhD, is a musicologist, conductor, and singer based in the Los Angeles area.
+							She received her doctorate from UCLA in 2015, supported by an Alvin H. Johnson AMS 50 Dissertation
+							Fellowship Award and a UCLA Dissertation Year Fellowship. Her forthcoming chapter on Soviet progressive
+							rock will appear in <em>Prog Rock in Europe: Overview of a Persistent Musical Style</em> alongside the work of
+							Allan Moore and Franco Fabbri. This edition will be published by Editions Universitaires de Dijon in 2016.
+							Fluent in Russian, Alex has previously done extensive work on translating unpublished correspondence and
+							doing complete Russian-to-English transliteration for Tamara Levitz's PROSE-awarded 2012 book <em>Modernist
+							Mysteries: Perséphone</em>. She has also worked as a score reader for the Metropolitan Opera's live HD broadcasts
+							since 2014.
 						</p>
 						<div class="centerHolder">
 						  <a id="cv" class="download-link" href="<?php echo SITE; ?>/grabarchuk%20cv.pdf" target="_blank">curriculum vitae</a>
 						</div>
 					</div>
 				</div>
-				<a class="menuLink" href="academe">Academe</a>
+				<a class="menuLink" href="bio">Bio</a>
 			</div>
 			<div class="contentWrapper second" page="teaching">
 				<div class="contentDrawer">
@@ -134,7 +132,7 @@ $videos = array(
 						<div id="performance">
 							<ul class="menu">
 								<li>
-									<a href="javascript:void(0);" class="accordionTrigger" accordion="piano">Piano</a>
+									<a href="javascript:void(0);" class="accordionTrigger" accordion="conducting">Conducting</a>
 								</li>
 								<li>
 								|
@@ -146,39 +144,16 @@ $videos = array(
 								|
 								</li>
 								<li>
-									<a href="javascript:void(0);" class="accordionTrigger" accordion="conducting">Conducting</a>
+									<a href="javascript:void(0);" class="accordionTrigger" accordion="piano">Piano</a>
 								</li>
 							</ul>
-							<div class="accordion" accordion="piano">
-								Having received a thorough education in both piano performance and music theory, Alex is an ardent pianist who loves keyboards of all sorts,
-								as can be witnessed by her work with the pianoforte, baroque organ, and harpsichord. She has done some transcription work as well,
-								expressively realizing Leo Brouwer's guitar etudes on the piano. Alex has also gigged as a rehearsal and performance choral accompanist
-								around the Los Angeles area, playing for such groups as the UCLA Chorus, American Lutheran Church in Burbank, and Cantate Hominem Men's Choir.
-							  <?php if ($videos['piano']) : ?>
-								<div class="centerHolder small">
-									<div class="arrow left">
-										<img src="<?php echo IMG; ?>/arrow_left.png" />
-									</div>
-									<div class="centerContent">
-										<div class="slider">
-											<?php foreach ($videos['piano'] as $name => $identifier) : ?>
-												<a class="fancyvideo" rel="piano" href="<?php echo getVideoUrl($identifier); ?>"><img src="<?php echo getVideoThumbnail($identifier); ?>" class="video" alt="" /></a>
-											<?php endforeach; ?>
-										</div>
-									</div>
-									<div class="arrow right">
-										<img src="<?php echo IMG; ?>/arrow_right.png" />
-									</div>
-								</div>
-							  <?php endif; ?>
-							</div>
 							<div class="accordion" accordion="singing">
 								Over the last decade, Alex has developed extensive vocal experience, from performing Carmina Burana on a Greek island with 2,000 other singers in
 								the Festival of the Aegean to embodying one half of duo Guitaria with contemporary composer/guitarist Peter Yates.
                 She also sings Bulgarian, Georgian, and other types of folk music from Eastern Europe. In 2015, she travelled to Bulgaria and performed at the 50th National Folklore Festival Koprivshtitsa Jubilee under the direction of <a href="http://durfee.org/awardee/tzvetanka-varimezova/" target="_blank">Tzvetanka Varimezova</a>.
 								Alex's favorite type of vocal performance, however, remains music written before 1650, as can be seen through her	involvement with
 								early music groups such as <a href="http://www.jouyssance.org" target="_blank">Jouyssance</a> and the UCLA Early Music Ensemble.
-                She is currently employed as the Alto Section Leader for the <a href="http://www.sgvccsingers.org/"  target="_blank">San Gabriel Valley Choral Company</a>.
+                She is currently Alto Section Leader for the <a href="http://www.sgvccsingers.org/"  target="_blank">San Gabriel Valley Choral Company</a>.
 							  <?php if ($videos['singing']) : ?>
 								<div class="centerHolder small">
 									<div class="arrow left">
@@ -198,11 +173,10 @@ $videos = array(
 							  <?php endif; ?>
 							</div>
 							<div class="accordion" accordion="conducting">
-								Alex has worked as Director of Choral Activities and Conductor at American Lutheran Church in Burbank, after training as a choral conductor
-								with Director of UCLA Choral Activities Donald Neuen and Director of Towson University Choral Activities Arian Khaefi.
+								In 2015, Alex received an invitation and scholarship to observe the inaugural <a href="http://dallasopera.org/learn/womens-conducting-institute/">Institute for Women Conductors</a> at The Dallas Opera.
+								Alex has trained as a choral conductor with Director of UCLA Choral Activities Donald Neuen and Director of Towson University Choral Activities Arian Khaefi.
 								She has also studied orchestral conducting with Dr. James Smith.
-								Alex spent the 2013-2014 season as Managing Director/Conductor of the UCLA Early Music Ensemble through a year-long Teaching Assistantship.
-							  <?php if ($videos['conducting']) : ?>
+								Alex has served as Managing Director & Conductor of the UCLA Early Music Ensemble, and worked as Director of Choral Activities at American Lutheran Church in Burbank.							  <?php if ($videos['conducting']) : ?>
 								<div class="centerHolder small">
 									<div class="arrow left">
 										<img src="<?php echo IMG; ?>/arrow_left.png" />
@@ -226,10 +200,33 @@ $videos = array(
 								</div>
 							  <?php endif; ?>
 							</div>
+							<div class="accordion" accordion="piano">
+								Having received a thorough education in both piano performance and music theory, Alex is an ardent pianist who loves keyboards of all sorts,
+								as can be witnessed by her work with the pianoforte, baroque organ, and harpsichord. She has done some transcription work as well,
+								expressively realizing Leo Brouwer's guitar etudes on the piano. Alex has also gigged as a rehearsal and performance choral accompanist
+								around the Los Angeles area, playing for such groups as the UCLA Chorus, American Lutheran Church in Burbank, and Cantate Hominem Men's Choir.
+							  <?php if ($videos['piano']) : ?>
+								<div class="centerHolder small">
+									<div class="arrow left">
+										<img src="<?php echo IMG; ?>/arrow_left.png" />
+									</div>
+									<div class="centerContent">
+										<div class="slider">
+											<?php foreach ($videos['piano'] as $name => $identifier) : ?>
+												<a class="fancyvideo" rel="piano" href="<?php echo getVideoUrl($identifier); ?>"><img src="<?php echo getVideoThumbnail($identifier); ?>" class="video" alt="" /></a>
+											<?php endforeach; ?>
+										</div>
+									</div>
+									<div class="arrow right">
+										<img src="<?php echo IMG; ?>/arrow_right.png" />
+									</div>
+								</div>
+							  <?php endif; ?>
+							</div>
 						</div>
 					</div>
 				</div>
-				<a class="menuLink" href="performance">Performance</a>
+				<a class="menuLink" href="performance">Music</a>
 			</div>
 		</div>
 		<div id="contactInfo">
