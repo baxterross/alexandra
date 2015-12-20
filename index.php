@@ -78,7 +78,7 @@ $videos = array(
 				<div class="contentDrawer">
 					<div class="contentInner">
 						<p>
-							Alexandra Grabarchuk, PhD, is a musicologist, conductor, and singer based in the Los Angeles area.
+							Alexandra Grabarchuk, PhD, is a musicologist and performer based in the Los Angeles area.
 							She received her doctorate from UCLA in 2015, supported by an Alvin H. Johnson AMS 50 Dissertation
 							Fellowship Award and a UCLA Dissertation Year Fellowship. Her forthcoming chapter on Soviet progressive
 							rock will appear in <em>Prog Rock in Europe: Overview of a Persistent Musical Style</em> alongside the work of
