@@ -100,9 +100,11 @@ $videos = array(
 					<div class="contentInner">
 						<div id="teaching">
 						  <p>
-                Alex is currently a Visiting Lecturer of Joint Music at the Claremont University Consortium, teaching at Scripps College.
-                She has also had 5+ years of teaching experience at UCLA, working with diverse student populations from undergraduates to senior citizens.
-                Her teaching portfolio includes classes such as Electronic Dance Music, History of Baroque Opera, and Music & Film.
+                Alex is currently an Adjunct Professor of Piano at Mt. San Antonio College, and Instructor of Music History at
+                UCLA Extension. She has previously served as Visiting Lecturer at the Claremont University Consortium,
+                teaching at Scripps College. She has also had 5+ years of teaching experience at UCLA, working with diverse
+                student populations from undergraduates to senior citizens. Her teaching portfolio includes classes such as
+                Electronic Dance Music, History of Baroque Opera, and Music & Film.
 						  </p>
 					    <?php if ($videos['teaching']) : ?>
 						  <div class="centerHolder">
@@ -148,12 +150,20 @@ $videos = array(
 								</li>
 							</ul>
 							<div class="accordion" accordion="singing">
-								Over the last decade, Alex has developed extensive vocal experience, from performing Carmina Burana on a Greek island with 2,000 other singers in
-								the Festival of the Aegean to embodying one half of duo Guitaria with contemporary composer/guitarist Peter Yates.
-                She also sings Bulgarian, Georgian, and other types of folk music from Eastern Europe. In 2015, she travelled to Bulgaria and performed at the 50th National Folklore Festival Koprivshtitsa Jubilee under the direction of <a href="http://durfee.org/awardee/tzvetanka-varimezova/" target="_blank">Tzvetanka Varimezova</a>.
-								Alex's favorite type of vocal performance, however, remains music written before 1650, as can be seen through her	involvement with
-								early music groups such as <a href="http://www.jouyssance.org" target="_blank">Jouyssance</a> and the UCLA Early Music Ensemble.
-                She is currently Alto Section Leader for the <a href="http://www.sgvccsingers.org/"  target="_blank">San Gabriel Valley Choral Company</a>.
+				Over the last decade, Alex has developed extensive vocal experience, from performing Carmina Burana
+				on a Greek island with 2,000 other singers in
+				the Festival of the Aegean to embodying one half of duo Guitaria with contemporary
+				composer/guitarist Peter Yates.
+                She also sings Bulgarian, Georgian, and other types of folk music from Eastern Europe.
+                In 2015, she travelled to Bulgaria and performed at the 50th National Folklore Festival
+                Koprivshtitsa Jubilee under the direction of
+                <a href="http://durfee.org/awardee/tzvetanka-varimezova/" target="_blank">Tzvetanka Varimezova</a>.
+				Alex's favorite type of vocal performance, however, remains music written before 1650,
+				as can be seen through her involvement with early music groups such as
+				<a href="http://www.jouyssance.org" target="_blank">Jouyssance</a> and the UCLA Early Music Ensemble.
+                She is currently Alto Section Leader at
+                <a href="http://santamonicaumc.org/" target="_blank">First United Methodist Church of Santa Monica</a>
+                and the <a href="http://www.sgvccsingers.org/"  target="_blank">San Gabriel Valley Choral Company</a>.
 							  <?php if ($videos['singing']) : ?>
 								<div class="centerHolder small">
 									<div class="arrow left">
