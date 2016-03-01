@@ -240,7 +240,7 @@ $videos = array(
 			</div>
 		</div>
 		<div id="contactInfo">
-			<span>&copy; 2013 Alexandra Grabarchuk</span> |
+			<span>&copy; <?= date('Y') ?> Alexandra Grabarchuk</span> |
 			<span>contact <a href="mailto:shoora84@gmail.com">shoora84@gmail.com</a></span> |
 			<span>construction <a href="http://baxterross.com/tautology">Tautology</a>
 		</div>
