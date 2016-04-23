@@ -3,10 +3,6 @@ var stateChangeHandlers = {
     enter: [],
     leave: []
   },
-  bio: {
-    enter: [],
-    leave: []
-  },
   performance: {
     enter: [],
     leave: [],
@@ -28,6 +24,10 @@ var stateChangeHandlers = {
     }
   },
   teaching: {
+    enter: [],
+    leave: []
+  },
+  translation_editing: {
     enter: [],
     leave: []
   }
@@ -63,6 +63,18 @@ function switchPage(event) {
 */
 		});
 
+		var wrappers = wrapper.siblings('.contentWrapper');
+		wrappers.push(wrapper[0]);
+		wrappers.find('.contentDrawer').slideUp(300);
+		wrappers.find('.menuLink').animate({
+			top : '-36px'
+		});
+		wrappers.find('.contentInner').fadeTo(300, 0);
+
+		wrapper.find('.contentDrawer').slideDown(300);
+		wrapper.find('.contentInner').fadeTo(300, 1);
+
+/*
 		if (page == 'home') {
 			var wrappers = wrapper.siblings('.contentWrapper');
 			wrappers.push(wrapper[0]);
@@ -87,6 +99,8 @@ function switchPage(event) {
 			wrappers.find('.contentInner').fadeTo(300, 0);
 			wrapper.find('.contentInner').fadeTo(300, 1);
 		}
+*/
+
 	}
 }
 function scrollCenterContent(event) {
@@ -134,8 +148,9 @@ QuoteHandler.prototype = {
     this.quotes = $(holder)[0].children;
     this.interval = null;
     var handlers = window.stateChangeHandlers[page];
-    handlers = tab && handlers[tab] || handlers;
-    handlers.enter.push(this.start.bind(this));
+    if (tab)
+	    handlers = handlers[tab]
+	handlers.enter.push(this.start.bind(this));
     handlers.leave.push(this.stop.bind(this));
   },
   start: function() {
@@ -169,8 +184,8 @@ QuoteHandler.prototype = {
 };
 
 $(document).ready(function() {
-  var teachingQuotes = new QuoteHandler($('#teaching .quotes'), 'teaching');
-  var conductingQuotes = new QuoteHandler($('.accordion[accordion=conducting] .quotes'), 'performance', 'conducting');
+	var teachingQuotes = new QuoteHandler($('#teaching .quotes'), 'teaching');
+	var conductingQuotes = new QuoteHandler($('.accordion[accordion=conducting] .quotes'), 'performance', 'conducting');
 	$('a.menuLink').click(switchPage);
 	var page = $('body').attr('page');
 	$('a.menuLink[href='+page+']').trigger('click');

@@ -2,15 +2,6 @@
 
 define('SERVER_NAME', $_SERVER['SERVER_NAME']);
 
-switch(SERVER_NAME) {
-	case 'alex.localhost' :
-	case 'alexandra.localhost' :
-		break;
-	case 'alexgrabarchuk.com' :
-	case 'alexandragrabarchuk.com' :
-		break;
-}
-
 define('ROOT', __DIR__);
 
 define('JQUERY', ROOT.'/js/jquery-1.9.1.min.js');
@@ -24,6 +15,10 @@ define('FANCYBOX_CSS', ROOT.'/css/fancybox.2.1.4.css');
 define('SITE', 'http://'.SERVER_NAME);
 define('IMG', SITE.'/img');
 
+include(ROOT.'/templates.php');
+
 include(ROOT.'/library.php');
+
+include(ROOT.'/videos.php');
 
 ?>
