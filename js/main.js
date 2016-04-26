@@ -71,9 +71,8 @@ function switchPageImage(page) {
 	var image = $('#left .img[page='+page+']'),
 		images = image.siblings('.img');
 
-	images.fadeTo(300, 0, function() {
-		image.fadeTo(300, 1);
-	});
+	image.addClass('visible');
+	images.removeClass('visible');
 }
 
 function switchPage(event) {

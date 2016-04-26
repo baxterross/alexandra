@@ -37,8 +37,12 @@ a.active {
 		bottom:0;
 		left:0;
 		width:100%;
-		opacity:0;
-		filter:alpha(opacity=0);
+		opacity: 0;
+		transition: opacity 320ms 0ms;
+	}
+	#left .img.visible {
+		opacity: 1;
+		transition: opacity 320ms 280ms;
 	}
 		#left .img img {
 			width:100%;
@@ -74,8 +78,9 @@ a.active {
 }
 
 	.contentWrapper {
-		width:100%;
-		position:absolute;
+		width: 100%;
+		position: absolute;
+		padding-top: 16px;
 	}
 	.contentWrapper.visible {
 		z-index: 10;
@@ -95,7 +100,7 @@ a.active {
 			opacity: 1
 		}
 			.contentInner p {
-				margin:20px 10px 5px;
+				margin: 20px 10px 5px;
 			}
 			.centerHolder {
 				white-space:nowrap;
@@ -214,14 +219,10 @@ a.active {
 	}
 
 /* -- performance page -- */
-#performance {
-	padding:15px 0 0;
-}
-
 ul.menu {
-	margin:0 40px 10px;
-	padding:10px 30px;
-	text-align:center;
+	margin: 0 0 18px;
+	padding: 0;
+	text-align: center;
 }
 	ul.menu li {
 		display:inline;
