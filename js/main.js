@@ -40,51 +40,68 @@ function fireHandlers(handlers, page, tab) {
 		handler(page, tab);
 	});
 }
+function leavePage(page) {
+	var handlers = window.stateChangeHandlers,
+		pageHandlers = handlers[page].leave,
+		activeTab = handlers[page].activeTab,
+		tabHandlers;
+
+	fireHandlers(pageHandlers, page);
+
+	if (activeTab) {
+		tabHandlers = handlers[page].tabs[activeTab].leave;
+		fireHandlers(tabHandlers, page);
+	}
+}
+function enterPage(page) {
+	var handlers = window.stateChangeHandlers,
+		pageHandlers = handlers[page].enter,
+		activeTab = handlers[page].activeTab,
+		tabHandlers;
+
+	fireHandlers(pageHandlers, page);
+
+	if (activeTab) {
+		tabHandlers = handlers[page].tabs[activeTab].enter;
+		fireHandlers(tabHandlers, page);
+	}
+}
+
+function switchPageImage(page) {
+	var image = $('#left .img[page='+page+']'),
+		images = image.siblings('.img');
+
+	images.fadeTo(300, 0, function() {
+		image.fadeTo(300, 1);
+	});
+}
 
 function switchPage(event) {
 	event.preventDefault();
 
 	var trigger = $(event.currentTarget),
-		triggers = $('.menuLink').not(trigger),
-		wrapper = trigger.parents('.contentWrapper'),
-		wrappers = wrapper.siblings('.contentWrapper'),
-		page = wrapper.attr('page'),
-		image = $('#left .img[page='+page+']'),
-		activeTab;
-
+		triggers = trigger.siblings('.menuLink'),
+		page = trigger.attr('href'),
+		wrapper = $('.contentWrapper[page='+page+']'),
+		wrappers = wrapper.siblings('.contentWrapper');
 
 	if (page != window.currentPage) {
 		triggers.removeClass('active');
 		trigger.addClass('active');
 
 		if (window.currentPage) {
-			fireHandlers(window.stateChangeHandlers[window.currentPage].leave, window.currentPage);
-			if (activeTab = window.stateChangeHandlers[window.currentPage].activeTab) {
-				fireHandlers(window.stateChangeHandlers[window.currentPage].tabs[activeTab].leave, window.currentPage);
-			}
+			leavePage(window.currentPage)
 		}
 		
 		history.pushState({}, page, page);
 		window.currentPage = page;
 		
-		fireHandlers(window.stateChangeHandlers[window.currentPage].enter, window.currentPage);
-		if (activeTab = window.stateChangeHandlers[window.currentPage].activeTab) {
-			fireHandlers(window.stateChangeHandlers[window.currentPage].tabs[activeTab].enter, window.currentPage);
-		}
+		enterPage(page);
 
-		image.siblings('.img').fadeTo(300, 0, function() {
-			image.fadeTo(300, 1);
-		});
+		switchPageImage(page);
 
-		wrappers.push(wrapper[0]);
-		wrappers.find('.contentDrawer').slideUp(300);
-		wrappers.find('.menuLink').animate({
-			top : '-36px'
-		});
-		wrappers.find('.contentInner').fadeTo(300, 0);
-
-		wrapper.find('.contentDrawer').slideDown(300);
-		wrapper.find('.contentInner').fadeTo(300, 1);
+		wrappers.removeClass('visible');
+		wrapper.addClass('visible');
 	}
 }
 
@@ -182,14 +199,19 @@ QuoteHandler.prototype = {
 $(document).ready(function() {
 	var teachingQuotes = new QuoteHandler($('#teaching .quotes'), 'teaching');
 	var conductingQuotes = new QuoteHandler($('.accordion[accordion=conducting] .quotes'), 'performance', 'conducting');
-	$('a.menuLink').click(switchPage);
+
 	var page = $('body').attr('page');
+
+	$('a.menuLink').click(switchPage);
 	$('a.menuLink[href='+page+']').trigger('click');
+
 	$('.arrow').click(scrollCenterContent);
+
 	$('.fancybox').fancybox();
 	$('.fancyvideo').fancybox({
 		'type' : 'iframe'
 	});
+
 	$('.accordionTrigger').click(accordionClick);
 	$('.accordionTrigger[accordion=conducting]').click();
 });

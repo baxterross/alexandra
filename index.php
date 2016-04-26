@@ -36,6 +36,7 @@ else
 			</div>
 		</div>
 		<div id="right">
+			<?php include(TEMPLATE_NAV); ?>
 			<?php include(TEMPLATE_HOME); ?>
 			<?php include(TEMPLATE_MUSIC); ?>
 			<?php include(TEMPLATE_TEACHING); ?>

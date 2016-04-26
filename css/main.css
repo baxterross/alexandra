@@ -15,12 +15,13 @@ a {
 	font-weight:bold;
 	color:inherit;
 	transition:opacity 200ms, color 200ms;
+	color: #5b112c;
 }
 a:hover {
-	opacity:.8;
+	color: #8d1b43;
 }
-a.active:hover {
-  opacity:1;
+a.active {
+	color: #ce2763;
 }
 
 /* left */
@@ -43,125 +44,114 @@ a.active:hover {
 			width:100%;
 		}
 
-.home {
-	z-index:4;
+
+.nav {
+	padding-bottom: 10px;
 }
-	.home .menuLink {
-		left:20px;
-	}
-.first {
-	z-index:3;
+.nav:after {
+	content: "";
+	display: block;
+	clear: both;
 }
-	.first .menuLink {
-		left:185px;
-	}
-.second {
-	z-index:2;
-}
-	.second .menuLink {
-		left:340px;
-	}
-.third {
-	z-index:1;
-}
-	.third .menuLink {
-		left:580px;
+	.menuLink {
+		padding: 16px 24px 24px;
+		display: block;
+		float: left;
+		text-decoration:none;
+		color:#000;
+		text-transform:uppercase;
+		font-weight:normal;
+		font-size:18px;
+		letter-spacing:5px;
+		border-bottom: 1px solid #999;
 	}
 
 #right {
 	float:right;
-	height:80%;
+	height:88%;
 	width:70%;
-	padding:10% 0;
+	padding:6% 0;
 }
+
 	.contentWrapper {
 		width:100%;
 		position:absolute;
 	}
-		.contentDrawer {
-			display:none;
+	.contentWrapper.visible {
+		z-index: 10;
+	}
+		.contentInner {
+			margin:0 0 0 40px;
+			height:500px;
+			width:710px;
+			opacity:0;
+			text-align:justify;
+			line-height:22px;
+			overflow:hidden;
+			opacity: 0;
+			transition: opacity 300ms;
 		}
-			.contentInner {
-				margin:0 0 0 40px;
-				height:500px;
-				width:710px;
-				opacity:0;
-				filter:alpha(opacity=0);
-				text-align:justify;
-				line-height:22px;
-				overflow:hidden;
+		.visible .contentInner {
+			opacity: 1
+		}
+			.contentInner p {
+				margin:20px 10px 5px;
 			}
-				.contentInner p {
-					margin:20px 10px 5px;
-				}
-				.centerHolder {
-					white-space:nowrap;
-					margin:0 auto;
-					padding:20px 0 0;
-					text-align:center;
-				}
-					.centerHolder .arrow {
-						display:inline-block;
-						height:240px;
-						width:20px;
-						cursor:pointer;
-					}
-					.centerHolder.small .arrow, .centerHolder.small .arrow img {
-						height:125px;
-						width:20px;
-					}
-						.centerHolder .arrow:hover {
-							opacity:.8;
-						}
-						.centerHolder .arrow.left {
-							margin-left:-30px;
-						}
-						.centerHolder .arrow.right {
-							margin-right:-30px;
-						}
-				.contentInner .centerContent {
+			.centerHolder {
+				white-space:nowrap;
+				margin:0 auto;
+				padding:20px 0 0;
+				text-align:center;
+			}
+				.centerHolder .arrow {
 					display:inline-block;
 					height:240px;
-					width:656px;
-					padding:5px 0;
-					overflow:hidden;
-					vertical-align:top;
-					white-space:nowrap;
+					width:20px;
+					cursor:pointer;
 				}
-				.contentInner .centerHolder.small .centerContent {
-					height:135px;
+				.centerHolder.small .arrow, .centerHolder.small .arrow img {
+					height:125px;
+					width:20px;
 				}
-					.contentInner .headshot,
-					.contentInner .video {
-						margin:0 6px 0 4px;
-						display:inline-block;
-						max-width:150px;
-						vertical-align:middle;
-						border-radius:10px;
-						box-shadow:2px 2px 8px 1px #444;
+					.centerHolder .arrow:hover {
+						opacity:.8;
 					}
-					.contentInner .mixed .headshot,
-					.contentInner .mixed .video {
-						max-height:100px;
+					.centerHolder .arrow.left {
+						margin-left:-30px;
 					}
-		.menuLink {
-			position:relative;
-			top:-36px;
-			text-decoration:none;
-			color:#000;
-			text-transform:uppercase;
-			font-weight:normal;
-			font-size:18px;
-			letter-spacing:5px;
-		}
-		.menuLink.active {
-      color: #9d1e4b;
-		}
+					.centerHolder .arrow.right {
+						margin-right:-30px;
+					}
+			.contentInner .centerContent {
+				display:inline-block;
+				height:240px;
+				width:656px;
+				padding:5px 0;
+				overflow:hidden;
+				vertical-align:top;
+				white-space:nowrap;
+			}
+			.contentInner .centerHolder.small .centerContent {
+				height:135px;
+			}
+				.contentInner .headshot,
+				.contentInner .video {
+					margin:0 6px 0 4px;
+					display:inline-block;
+					max-width:150px;
+					vertical-align:middle;
+					border-radius:10px;
+					box-shadow:2px 2px 8px 1px #444;
+				}
+				.contentInner .mixed .headshot,
+				.contentInner .mixed .video {
+					max-height:100px;
+				}
 
 .quotes {
   white-space: normal;
   position: relative;
-  padding-top: 16px;
+  padding-top: 20px;
 }
 .attribution {
 	margin-top: 10px;
@@ -231,7 +221,6 @@ a.active:hover {
 ul.menu {
 	margin:0 40px 10px;
 	padding:10px 30px;
-	border-top:1px solid #999;
 	text-align:center;
 }
 	ul.menu li {
