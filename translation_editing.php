@@ -1,4 +1,5 @@
 <div class="contentWrapper third" page="translation_editing">
+	<a class="menuLink" href="translation_editing">Translation/<br />Editing</a>
 	<div class="contentDrawer">
 		<div class="contentInner">
 			<div id="translation_editing">
@@ -27,5 +28,4 @@
 			</div>
 		</div>
 	</div>
-	<a class="menuLink" href="translation_editing">Translation/<br />Editing</a>
 </div>

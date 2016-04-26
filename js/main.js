@@ -1,69 +1,81 @@
 var stateChangeHandlers = {
-  home: {
-    enter: [],
-    leave: []
-  },
-  performance: {
-    enter: [],
-    leave: [],
-    conducting: {
-      enter: [],
-      leave: []
-    },
-    singing: {
-      enter: [],
-      leave: []
-    },
-    piano: {
-      enter: [],
-      leave: []
-    },
-    theater: {
-      enter: [],
-      leave: []
-    }
-  },
-  teaching: {
-    enter: [],
-    leave: []
-  },
-  translation_editing: {
-    enter: [],
-    leave: []
-  }
+	home: {
+		enter: [],
+		leave: []
+	},
+	performance: {
+		enter: [],
+		leave: [],
+		activeTab: null,
+		tabs: {
+			conducting: {
+				enter: [],
+				leave: []
+			},
+			singing: {
+				enter: [],
+				leave: []
+			},
+			piano: {
+				enter: [],
+				leave: []
+			},
+			theater: {
+				enter: [],
+				leave: []
+			}
+		}
+	},
+	teaching: {
+		enter: [],
+		leave: []
+	},
+	translation_editing: {
+		enter: [],
+		leave: []
+	}
 };
 function fireHandlers(handlers, page, tab) {
-  handlers.map(function(handler) {
-    handler(page, tab);
-  });
+	handlers.map(function(handler) {
+		handler(page, tab);
+	});
 }
 
 function switchPage(event) {
 	event.preventDefault();
-	var trigger = $(event.currentTarget);
-	var triggers = $('.menuLink').not(trigger);
-	var wrapper = trigger.parents('.contentWrapper');
-	var page = wrapper.attr('page');
-	if (page != window.currentPage) {
-	  triggers.removeClass('active');
-	  trigger.addClass('active');
-    window.currentPage && fireHandlers(window.stateChangeHandlers[window.currentPage].leave, window.currentPage);
-	  history.pushState({}, page, page);
-	  window.currentPage = page;
-    fireHandlers(window.stateChangeHandlers[window.currentPage].enter, page)
 
-		var image = $('#left .img[page='+page+']');
+	var trigger = $(event.currentTarget),
+		triggers = $('.menuLink').not(trigger),
+		wrapper = trigger.parents('.contentWrapper'),
+		wrappers = wrapper.siblings('.contentWrapper'),
+		page = wrapper.attr('page'),
+		image = $('#left .img[page='+page+']'),
+		activeTab;
+
+
+	if (page != window.currentPage) {
+		triggers.removeClass('active');
+		trigger.addClass('active');
+
+		if (window.currentPage) {
+			fireHandlers(window.stateChangeHandlers[window.currentPage].leave, window.currentPage);
+			if (activeTab = window.stateChangeHandlers[window.currentPage].activeTab) {
+				fireHandlers(window.stateChangeHandlers[window.currentPage].tabs[activeTab].leave, window.currentPage);
+			}
+		}
+		
+		history.pushState({}, page, page);
+		window.currentPage = page;
+		
+		fireHandlers(window.stateChangeHandlers[window.currentPage].enter, window.currentPage);
+		if (activeTab = window.stateChangeHandlers[window.currentPage].activeTab) {
+			fireHandlers(window.stateChangeHandlers[window.currentPage].tabs[activeTab].enter, window.currentPage);
+		}
+
 		image.siblings('.img').fadeTo(300, 0, function() {
 			image.fadeTo(300, 1);
-/*
-			var bgColor = (page == 'performance') ? 'rgba(212, 209, 194, 1)' : 'rgba(212, 209, 194, 0)';
-			$('body').animate({
-				'backgroundColor' : bgColor
-			}, 300);
-*/
 		});
 
-		var wrappers = wrapper.siblings('.contentWrapper');
 		wrappers.push(wrapper[0]);
 		wrappers.find('.contentDrawer').slideUp(300);
 		wrappers.find('.menuLink').animate({
@@ -73,48 +85,23 @@ function switchPage(event) {
 
 		wrapper.find('.contentDrawer').slideDown(300);
 		wrapper.find('.contentInner').fadeTo(300, 1);
-
-/*
-		if (page == 'home') {
-			var wrappers = wrapper.siblings('.contentWrapper');
-			wrappers.push(wrapper[0]);
-			wrappers.find('.contentDrawer').slideUp(300);
-			wrappers.find('.menuLink').animate({
-				top : '-20px'
-			});
-			wrappers.find('.contentInner').fadeTo(300, 0);
-		} else {
-			var wrappers = wrapper.prevAll('.contentWrapper');
-			wrappers.find('.contentDrawer').slideUp(300);
-			wrappers.find('.menuLink').animate({
-				top : '-20px'
-			});
-			wrappers.find('.contentInner').fadeTo(300, 0);
-			wrappers = wrapper.nextAll('.contentWrapper')
-			wrappers.push(wrapper[0]);
-			wrappers.find('.contentDrawer').slideDown(300);
-			wrappers.find('.menuLink').animate({
-				top : '20px'
-			});
-			wrappers.find('.contentInner').fadeTo(300, 0);
-			wrapper.find('.contentInner').fadeTo(300, 1);
-		}
-*/
-
 	}
 }
+
 function scrollCenterContent(event) {
-	var trigger = $(event.currentTarget);
-	var wrapper = trigger.siblings('.centerContent');
-	var slider = wrapper.find('div.slider');
-	var tiles = slider.find('a');
-	var offset = parseInt(slider.css('marginLeft'));
-	var change = parseInt(wrapper.css('width'));
+	var trigger = $(event.currentTarget),
+		wrapper = trigger.siblings('.centerContent'),
+		slider = wrapper.find('div.slider'),
+		tiles = slider.find('a'),
+		offset = parseInt(slider.css('marginLeft')),
+		change = parseInt(wrapper.css('width'));
+
 	if (trigger.hasClass('right')) {
 		offset = offset - change;
 	} else {
 		offset = offset + change;
 	}
+
 	if (offset <= 0 && offset >= -(155 * tiles.length))
 		slider.animate({
 			marginLeft : offset
@@ -135,21 +122,30 @@ function accordionClick(event) {
 	drawer.slideDown();
 	drawers.slideUp();
 
-	previousAccordion && fireHandlers(window.stateChangeHandlers['performance'][previousAccordion].leave, 'performance', previousAccordion);
-	fireHandlers(window.stateChangeHandlers['performance'][accordion].enter, 'performance', accordion);
+	if (previousAccordion)
+		fireHandlers(window.stateChangeHandlers['performance'].tabs[previousAccordion].leave, 'performance', previousAccordion);
+
+	fireHandlers(window.stateChangeHandlers['performance'].tabs[accordion].enter, 'performance', accordion);
+	window.stateChangeHandlers['performance'].activeTab = accordion;
 }
 
 function QuoteHandler(holder, page, tab) {
-  this.init(holder, page, tab);
+	this.init(holder, page, tab);
 }
 QuoteHandler.prototype = {
   init: function(holder, page, tab) {
+    this.identity = holder+' '+page+' '+tab;
+
     this.index = 0;
     this.quotes = $(holder)[0].children;
     this.interval = null;
-    var handlers = window.stateChangeHandlers[page];
+
+    var handlers;
     if (tab)
-	    handlers = handlers[tab]
+	    handlers = window.stateChangeHandlers[page].tabs[tab];
+    else
+	    handlers = window.stateChangeHandlers[page];
+
 	handlers.enter.push(this.start.bind(this));
     handlers.leave.push(this.stop.bind(this));
   },

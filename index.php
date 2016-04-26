@@ -32,7 +32,7 @@ else
 			<div class="img" page="teaching">
 				<img src="<?php echo IMG; ?>/academe.png" page="teaching" />
 			</div>
-			<div class="img" page="bio">
+			<div class="img" page="translation_editing">
 			</div>
 		</div>
 		<div id="right">

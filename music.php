@@ -1,4 +1,5 @@
 <div class="contentWrapper first" page="performance">
+	<a class="menuLink" href="performance">Music</a>
 	<div class="contentDrawer">
 		<div class="contentInner">
 			<div id="performance">
@@ -101,5 +102,4 @@
 			</div>
 		</div>
 	</div>
-	<a class="menuLink" href="performance">Music</a>
 </div>
