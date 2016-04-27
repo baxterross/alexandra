@@ -135,8 +135,8 @@ function accordionClick(event) {
 	trigger.addClass('active');
 	triggers.removeClass('active');
 
-	drawer.slideDown();
-	drawers.slideUp();
+	drawer.addClass('visible');
+	drawers.removeClass('visible');
 
 	if (previousAccordion)
 		fireHandlers(window.stateChangeHandlers['performance'].tabs[previousAccordion].leave, 'performance', previousAccordion);

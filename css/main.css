@@ -14,7 +14,7 @@ html, body {
 a {
 	font-weight:bold;
 	color:inherit;
-	transition:opacity 200ms, color 200ms;
+	transition: opacity 200ms, color 200ms;
 	color: #5b112c;
 }
 a:hover {
@@ -94,10 +94,10 @@ a.active {
 			line-height:22px;
 			overflow:hidden;
 			opacity: 0;
-			transition: opacity 300ms;
+			transition: opacity 320ms 0ms;
 		}
 		.visible .contentInner {
-			opacity: 1
+			opacity: 1;
 		}
 			.contentInner p {
 				margin: 20px 10px 10px;
@@ -235,8 +235,23 @@ ul.menu {
 .accordionTrigger.active {
   color: #9d1e4b;
 }
+.accordionHolder {
+	position: relative;
+}
+.accordionHolder:after {
+	content: '';
+	display: block;
+	clear: both;
+}
 .accordion {
-	display:none;
+	position: absolute;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 320ms 0ms;
+}
+.accordion.visible {
+	opacity: 1;
+	z-index: 1;
 }
 
 /* -- teaching page -- */
