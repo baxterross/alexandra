@@ -100,7 +100,7 @@ a.active {
 			opacity: 1
 		}
 			.contentInner p {
-				margin: 20px 10px 5px;
+				margin: 20px 10px 10px;
 			}
 			.centerHolder {
 				white-space:nowrap;
@@ -168,7 +168,7 @@ a.active {
   text-align: center;
   font-size: 13px;
   font-style: italic;
-  line-height: 2.2;
+  line-height: 1.8;
   transition: opacity 2s;
 }
 .quote.static {

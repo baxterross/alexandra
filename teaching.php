@@ -2,10 +2,9 @@
 	<div class="contentInner">
 		<div id="teaching">
 			<p>
-				Alex is currently an Adjunct Professor of Music at Mt. San Antonio College, and Instructor of Music History at UCLA Extension.
-				She has previously served as Visiting Lecturer at the Claremont University Consortium, teaching at Scripps College.
-				She has also had 5+ years of teaching experience at UCLA, working with diverse student populations from undergraduates to senior citizens.
-				Her teaching portfolio includes classes such as Electronic Dance Music, History of Baroque Opera, and Music & Film.
+				Alex has held teaching positions at Mt. San Antonio College, UCLA Extension, and the Claremont University Consortium.
+				Her teaching experience has encompassed working with diverse student populations from undergraduates to senior citizens, with glowing reviews from students and fellow faculty observers alike.
+				Her teaching portfolio includes courses in musicology, music history, and piano performance.
 			</p>
 		    <?php if ($videos['teaching']) : ?>
 			  <div class="centerHolder">
