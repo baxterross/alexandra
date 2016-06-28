@@ -2,7 +2,7 @@
 	<div class="contentInner">
 		<div id="teaching">
 			<p>
-				Alex has held teaching positions at Mt. San Antonio College, UCLA Extension, and the Claremont University Consortium.
+				Alex has held adjunct positions at UCLA, Mt. San Antonio College, and the Claremont University Consortium.
 				Her teaching experience has encompassed working with diverse student populations from undergraduates to senior citizens, with glowing reviews from students and fellow faculty observers alike.
 				Her teaching portfolio includes courses in musicology, music history, and piano performance.
 			</p>
