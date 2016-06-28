@@ -15,7 +15,7 @@
 				</ul>
 			</p>
 			<p>
-				Please e-mail <a href="mailto:shoora84@gmail.com">shoora84@gmail.com</a> to obtain a price quote for your editing and translation needs.
+				Please e-mail <a href="mailto:shoora84@gmail.com">shoora84@gmail.com</a> to discuss your editing and translation needs.
 			</p>
 			<div class="centerHolder quotes">
 			    <div class="quote static">Alexandra Grabarchuk went beyond the call of duty in her dedication to the many Russian translations she prepared for me behind the scenes; she became my Ukrainian ‘eyes’ and made it possible through her stunningly sensitive attunement to language for me to work with Russian sources.</div>
