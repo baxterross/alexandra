@@ -43,11 +43,11 @@
 				  <?php endif; ?>
 				</div>
 				<div class="accordion" accordion="conducting">
-					In 2015, Alex received an invitation and scholarship to observe the inaugural
-					<a href="http://dallasopera.org/learn/womens-conducting-institute/">Institute for Women Conductors</a> at The Dallas Opera.
-					Alex has trained as a choral conductor with Director of UCLA Choral Activities Donald Neuen and Director of Towson University Choral Activities Arian Khaefi.
-					She has also studied orchestral conducting with Dr. James Smith.
-					Alex has served as Managing Director & Conductor of the UCLA Early Music Ensemble, and worked as Director of Choral Activities at American Lutheran Church in Burbank.							  <?php if ($videos['conducting']) : ?>
+					Alex has studied choral and orchestral conducting with Distinguished Professor of Conducting Donald Neuen, as well as Dr. James Smith and Dr. Arian Khaefi.
+					Alex has served as Managing Director & Conductor of the UCLA Early Music Ensemble, and worked as Director of Choral Activities at American Lutheran Church in Burbank.
+					She is currently the Assistant Conductor of the <a href="http://www.sgvccsingers.org/">San Gabriel Valley Choral Company</a>.
+					In 2015, she was an invited observer at the inaugural Linda and Mitch Hart Institute for Women Conductors at the Dallas Opera.
+				  <?php if ($videos['conducting']) : ?>
 					<div class="centerHolder small">
 						<div class="arrow left">
 							<img src="<?php echo IMG; ?>/arrow_left.png" />
