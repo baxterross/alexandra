@@ -23,7 +23,9 @@
 					<a href="http://www.jouyssance.org" target="_blank">Jouyssance</a> and the UCLA Early Music Ensemble.
 				    She is currently Alto Section Leader at
 				    <a href="http://santamonicaumc.org/" target="_blank">First United Methodist Church of Santa Monica</a> and the
-				    <a href="http://www.sgvccsingers.org/"  target="_blank">San Gabriel Valley Choral Company</a>.
+				    <a href="http://www.sgvccsingers.org/"  target="_blank">San Gabriel Valley Choral Company</a>,
+				    as well as a conductor with the
+				    <a href="http://www.c3la.org/" target="_blank">Contemporary Choral Collective of Los Angeles (C3LA).</a>
 				  <?php if ($videos['singing']) : ?>
 					<div class="centerHolder small">
 						<div class="arrow left">

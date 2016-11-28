@@ -16,6 +16,7 @@ $videos = array(
 		'Dowland -- Come Heavy Sleep' => 'kmAb16PBhQI'
 	),
 	'conducting' => array(
+		'Siadat' => 'ZpbjV9xCeOU',
 	    'Bortniansky' => '5bhzcCOaLZ0',
 	    'Handel' => 'dwguYiRgx5w',
 	    'Lotti' => 'H9N1qGiCRJ8',
