@@ -46,16 +46,11 @@
 					Alex has studied choral and orchestral conducting with Distinguished Professor of Conducting Donald Neuen, as well as Dr. James Smith and Dr. Arian Khaefi.
 					Alex has served as Managing Director & Conductor of the UCLA Early Music Ensemble, and worked as Director of Choral Activities at American Lutheran Church in Burbank.
 					She is currently the Assistant Conductor of the
-					<a href="http://www.sgvccsingers.org/" target="_blank">
-						San Gabriel Valley Choral Company
-					</a>,
+					<a href="http://www.sgvccsingers.org/" target="_blank">San Gabriel Valley Choral Company</a>,
 					as well as a conductor with the
-				    <a href="http://www.c3la.org/" target="_blank">
-				    	Contemporary Choral Collective of Los Angeles (C3LA).
-				    </a>
+				    <a href="http://www.c3la.org/" target="_blank">Contemporary Choral Collective of Los Angeles (C3LA).</a>
 					In 2015, she was an invited observer at the inaugural
-					<a href="http://dallasopera.org/learn/womens-conducting-institute/" target="_blank">	Linda and Mitch Hart Institute for Women Conductors
-					</a>
+					<a href="http://dallasopera.org/learn/womens-conducting-institute/" target="_blank">Linda and Mitch Hart Institute for Women Conductors</a>
 					at the Dallas Opera.
 				  <?php if ($videos['conducting']) : ?>
 					<div class="centerHolder small">
