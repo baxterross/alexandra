@@ -18,14 +18,15 @@
 				<div class="accordion" accordion="conducting">
 					Alex is the current Artistic Director &amp; Conductor of the
 					<a href="http://www.sgvccsingers.org/" target="_blank">San Gabriel Valley Choral Company</a>,
-					as well as a co-conductor with the
+					as well as the Associate Director of the choirs at
+					<a href="http://www.chaffey.edu/" target="_blank">Chaffey College</a>
+					in Rancho Cucamonga, CA. She is also the co-conductor and administrative facilitator of the
 					<a href="http://www.c3la.org/" target="_blank">Contemporary Choral Collective of Los Angeles (C3LA)</a>.
-					She was an invited observer at the inaugural 
-					<a href="http://dallasopera.org/learn/womens-conducting-institute/" target="_blank">Linda and Mitch Hart Institute for Women Conductors</a>
-					at the Dallas Opera in 2015. Alex has previously directed the UCLA Early Music Ensemble,
-					and currently assists with the choirs at Chaffey College in Rancho Cucamonga.
-					Most recently, she has been invited as a Conducting Fellow at the 2017
-					<a href="http://norfolk.yale.edu/school/choral-about/" target="_blank">Norfolk Chamber Choir &amp; Choral Conducting Workshop</a>.
+					In 2018 she will travel as a Conducting Fellow to the
+					<a href="https://www.tmchoir.org/emerging-conductors-program/symposium-conductors/" target="_blank">Toronto Mendelssohn Choir Choral Conductor's Symposium</a>
+					in Canada, and the
+					<a href="http://www.sarteanochoralworkshop.com/" target="_blank">Sarteano Chamber Choral Conducting Workshop</a>
+					in Italy. She has studied with internationally renowned conductors Simon Carrington and Donald Neuen.
 				  <?php if ($videos['conducting']) : ?>
 					<div class="centerHolder small">
 						<div class="arrow left">
