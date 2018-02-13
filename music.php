@@ -26,7 +26,7 @@
 					<a href="https://www.tmchoir.org/emerging-conductors-program/symposium-conductors/" target="_blank">Toronto Mendelssohn Choir Choral Conductor's Symposium</a>
 					in Canada, and the
 					<a href="http://www.sarteanochoralworkshop.com/" target="_blank">Sarteano Chamber Choral Conducting Workshop</a>
-					in Italy. She has studied with internationally renowned conductors Simon Carrington and Donald Neuen.
+					in Italy. She has studied with internationally renowned conductors Donald Neuen and Simon Carrington.
 				  <?php if ($videos['conducting']) : ?>
 					<div class="centerHolder small">
 						<div class="arrow left">
