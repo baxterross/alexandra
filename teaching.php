@@ -2,12 +2,17 @@
 	<div class="contentInner">
 		<div id="teaching">
 			<p>
-				Alex currently holds the position of Visiting Assistant Professor of Choral Direction & Musicology at
-				<a href="http://earlham.edu/" target="_blank">Earlham College</a> in Richmond, Indiana. She has previously held adjunct
-				positions at UCLA, Chaffey College, Mt. SAC, and the Claremont University Consortium. Her teaching
-				experience has encompassed working with diverse student populations from undergraduates to senior
-				citizens, with glowing reviews from students and fellow faculty observers alike. Her teaching
-				portfolio includes courses in musicology, music history, and piano & vocal performance.
+				Alex currently holds the position of Assistant Professor of Music at
+				<a href="https://www.whittier.edu/" target="_blank">Whittier College</a>
+				in Southern California, where she directs the choral program and teaches music courses.
+
+				She has previously served as Visiting Assistant Professor of Choral Direction & Musicology at
+				<a href="http://earlham.edu/" target="_blank">Earlham College</a>,
+				and has held adjunct positions at UCLA, Chapman University, Chaffey College, Mt. SAC, and the Claremont University Consortium.
+
+				Her teaching experience has encompassed working with diverse student populations from undergraduates to senior citizens, with glowing reviews from students and fellow faculty observers alike.
+
+				Her teaching portfolio includes courses in musicology, music history, and piano & vocal performance.
 			</p>
 		    <?php if ($videos['teaching']) : ?>
 			  <div class="centerHolder">

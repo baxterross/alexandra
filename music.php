@@ -19,7 +19,7 @@
 					Alex is the current Artistic Director &amp; Conductor of the
 					<a href="http://www.sgvccsingers.org/" target="_blank">San Gabriel Valley Choral Company</a>,
 					as well as the Director of Choral Activities at
-					<a href="http://earlham.edu/" target="_blank">Earlham College</a>.
+					<a href="https://www.whittier.edu/" target="_blank">Whittier College</a>.
 					She has also served as co-conductor and administrative facilitator of the
 					<a href="http://www.c3la.org/" target="_blank">Contemporary Choral Collective of Los Angeles (C3LA)</a>.
 					In recent years, Alex has participated in the Norfolk Chamber Choir and Choral Conducting Workshop,
