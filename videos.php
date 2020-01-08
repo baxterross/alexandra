@@ -9,6 +9,7 @@ $videos = array(
  		'Zelenka' => 'Me8PZTvI9nY'
 	),
 	'singing' => array(
+		'Alexandra Grabarchuk -- Before Going to Work' => 'iAox5i3J-Y0',
 		'Monteverdi -- Voglio di vita uscir' => 'CbsdwzR9qEc',
 		'Elia Lrde ~ Datvebis Gundi' => 'xeo2PLGVLfU',
 		'Peter Yates\' song Alabama Vest' => 'BCd9NSsMXrI',
