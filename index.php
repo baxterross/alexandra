@@ -9,17 +9,19 @@ else
 
 ?>
 <!DOCTYPE html>
-<html
+<html>
 	<head>
 		<title>Alexandra Grabarchuk</title>
 		<style data-file="main.css">
 			<?php readfile(MAINCSS); ?>
 			<?php readfile(FANCYBOX_CSS); ?>
+			<?php readfile(SLICK_CSS); ?>
 		</style>
 		<script type="text/javascript" data-file="jquery-1.8.3.min.js"><?php readfile(JQUERY); ?></script>
 		<script type="text/javascript" data-file="jquery-colors.min.js"><?php readfile(JCOLOR); ?></script>
 		<script type="text/javascript" data-file="main.js"><?php readfile(MAINJS); ?></script>
 		<script type="text/javascript" data-file="fancybox.2.1.4.js"><?php readfile(FANCYBOX_JS); ?></script>
+		<script type="text/javascript" data-file="slick.min.js"><?php readfile(SLICK_JS); ?></script>
 	</head>
 	<body page="<?php echo $page; ?>">
 		<div id="left">

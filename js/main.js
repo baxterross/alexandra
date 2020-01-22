@@ -204,11 +204,26 @@ $(document).ready(function() {
 	$('a.menuLink').click(switchPage);
 	$('a.menuLink[href='+page+']').trigger('click');
 
-	$('.arrow').click(scrollCenterContent);
-
 	$('.fancybox').fancybox();
 	$('.fancyvideo').fancybox({
 		'type' : 'iframe'
+	});
+
+	// Slick Slider for performance page
+	$('.centerContent .slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		arrows: false,
+		dots: false,
+		infinite: false,
+	});
+	$('.arrow.left').click(function() {
+		var dataIndex = $(this).parent().data('index')
+		$('.centerHolder[data-index="' + dataIndex + '"] .slider').slick('slickPrev');
+	});
+	$('.arrow.right').click(function() {
+		var dataIndex = $(this).parent().data('index')
+		$('.centerHolder[data-index="' + dataIndex + '"] .slider').slick('slickNext');
 	});
 
 	$('.accordionTrigger').click(accordionClick);
