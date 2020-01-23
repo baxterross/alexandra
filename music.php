@@ -27,7 +27,7 @@
 					and the Saskatchewan Orchestral Association’s International Conducting Workshop.
 					She has studied with renowned conductors Donald Neuen and Simon Carrington.
 				  <?php if ($videos['conducting']) : ?>
-					<div class="centerHolder small">
+					<div class="centerHolder small" data-index="1">
 						<div class="arrow left">
 							<img src="<?php echo IMG; ?>/arrow_left.png" />
 						</div>
@@ -36,6 +36,9 @@
 								<?php foreach ($videos['conducting'] as $name => $identifier) : ?>
 									<a class="fancyvideo" rel="conducting" href="<?php echo getVideoUrl($identifier); ?>"><img src="<?php echo getVideoThumbnail($identifier); ?>" class="video" alt="" /></a>
 								<?php endforeach; ?>
+								<?php for ($i = 4; $i > count($videos['conducting']) % 4; $i--) : ?>
+									<a class="fancyvideo" rel="conducting"></a>
+								<?php endfor ?>
 							</div>
 						</div>
 						<div class="arrow right">
@@ -56,7 +59,7 @@
 					Alex's favorite type of vocal performance remains music written before 1650, as can be seen through her involvement with early music groups such as
 					<a href="http://www.jouyssance.org" target="_blank">Jouyssance</a> and the UCLA Early Music Ensemble.
 				  <?php if ($videos['singing']) : ?>
-					<div class="centerHolder small">
+					<div class="centerHolder small" data-index="2">
 						<div class="arrow left">
 							<img src="<?php echo IMG; ?>/arrow_left.png" />
 						</div>
@@ -65,6 +68,9 @@
 								<?php foreach ($videos['singing'] as $name => $identifier) : ?>
 									<a class="fancyvideo" rel="singing" href="<?php echo getVideoUrl($identifier); ?>"><img src="<?php echo getVideoThumbnail($identifier); ?>" class="video" alt="" /></a>
 								<?php endforeach; ?>
+								<?php for ($i = 4; $i > count($videos['singing']) % 4; $i--) : ?>
+									<a class="fancyvideo" rel="singing"></a>
+								<?php endfor ?>
 							</div>
 						</div>
 						<div class="arrow right">
@@ -79,7 +85,7 @@
 					expressively realizing Leo Brouwer's guitar etudes on the piano. Alex has also gigged as a rehearsal and performance choral accompanist
 					around the Los Angeles area, playing for such groups as the UCLA Chorus, American Lutheran Church in Burbank, and Cantate Hominem Men's Choir.
 				  <?php if ($videos['piano']) : ?>
-					<div class="centerHolder small">
+					<div class="centerHolder small" data-index="3">
 						<div class="arrow left">
 							<img src="<?php echo IMG; ?>/arrow_left.png" />
 						</div>
@@ -88,6 +94,9 @@
 								<?php foreach ($videos['piano'] as $name => $identifier) : ?>
 									<a class="fancyvideo" rel="piano" href="<?php echo getVideoUrl($identifier); ?>"><img src="<?php echo getVideoThumbnail($identifier); ?>" class="video" alt="" /></a>
 								<?php endforeach; ?>
+								<?php for ($i = 4; $i > count($videos['piano']) % 4; $i--) : ?>
+									<a class="fancyvideo" rel="piano"></a>
+								<?php endfor ?>
 							</div>
 						</div>
 						<div class="arrow right">

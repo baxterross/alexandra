@@ -12,6 +12,9 @@ define('MAINCSS', ROOT.'/css/main.css');
 define('FANCYBOX_JS', ROOT.'/js/fancybox.2.1.4.js');
 define('FANCYBOX_CSS', ROOT.'/css/fancybox.2.1.4.css');
 
+define('SLICK_JS', ROOT.'/js/slick.min.js');
+define('SLICK_CSS', ROOT.'/css/slick.css');
+
 define('SITE', 'http://'.SERVER_NAME);
 define('IMG', SITE.'/img');
 
