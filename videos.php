@@ -6,7 +6,8 @@ $videos = array(
 		'Cimarosa' => 'PZi9_yG21ds',
         'Grabarchuk' => 'RUHbhxdAoEQ',
 		'Cima' => '8sXqJhTXciM',
- 		'Zelenka' => 'Me8PZTvI9nY'
+ 		'Zelenka' => 'Me8PZTvI9nY',
+ 		'Anonyme' => 'hfopexARzy8'
 	),
 	'singing' => array(
 		'Alexandra Grabarchuk -- Before Going to Work' => 'iAox5i3J-Y0',
