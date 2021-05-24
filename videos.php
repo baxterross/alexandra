@@ -2,12 +2,12 @@
 
 $videos = array(
 	'piano' => array(
+ 		'Anonyme' => 'hfopexARzy8',
 		'Brouwer' => 'mBve8yaKC9Q',
 		'Cimarosa' => 'PZi9_yG21ds',
         'Grabarchuk' => 'RUHbhxdAoEQ',
 		'Cima' => '8sXqJhTXciM',
- 		'Zelenka' => 'Me8PZTvI9nY',
- 		'Anonyme' => 'hfopexARzy8'
+ 		'Zelenka' => 'Me8PZTvI9nY'
 	),
 	'singing' => array(
 		'Alexandra Grabarchuk -- Before Going to Work' => 'iAox5i3J-Y0',
