@@ -306,4 +306,8 @@ ul.menu {
 	ul.menu li:nth-child(2n) {
 		display: none;
 	}
+	.contentInner {
+		min-height: 560px;
+		margin-bottom: 70px;
+	}
 }
