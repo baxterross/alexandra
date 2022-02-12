@@ -2,6 +2,7 @@
 
 $videos = array(
 	'piano' => array(
+		'La Bonne et Belle' => 'kMhLSVaR8WM',
  		'Anonyme' => 'hfopexARzy8',
 		'Brouwer' => 'mBve8yaKC9Q',
 		'Cimarosa' => 'PZi9_yG21ds',
