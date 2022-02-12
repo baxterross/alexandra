@@ -12,6 +12,7 @@ else
 <html>
 	<head>
 		<title>Alexandra Grabarchuk</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style data-file="main.css">
 			<?php readfile(MAINCSS); ?>
 			<?php readfile(FANCYBOX_CSS); ?>
