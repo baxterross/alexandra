@@ -135,11 +135,14 @@ a.active {
 				vertical-align:top;
 				white-space:nowrap;
 			}
+			.contentInner .centerContent .stack {
+				display: none;
+			}
 			.contentInner .centerHolder.small .centerContent {
 				height:135px;
 			}
-				.contentInner .headshot,
-				.contentInner .video {
+				.contentInner .slider .headshot,
+				.contentInner .slider .video {
 					margin:0 6px 0 4px;
 					display:inline-block;
 					max-width:150px;
@@ -286,15 +289,16 @@ ul.menu {
 		padding-bottom: 16px;
 	}
 	.contentInner {
-		margin: 0 24px 100px;
 		width: auto;
-	}
-	.centerHolder .arrow{
-		display: none;
+		margin: 0 24px 80px;
+		min-height: 600px;
 	}
 	.contentInner p {
 		margin-left: 0;
 		margin-right: 0;
+	}
+	.contentInner .centerHolder .arrow {
+		display: none;
 	}
 }
 @media screen and (max-width: 360px) {
@@ -307,7 +311,6 @@ ul.menu {
 		display: none;
 	}
 	.contentInner {
-		min-height: 560px;
 		margin-bottom: 70px;
 	}
 }
